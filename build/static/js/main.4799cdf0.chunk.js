@@ -1,0 +1,2 @@
+(this["webpackJsonplearn-react"]=this["webpackJsonplearn-react"]||[]).push([[0],{4:function(r,n,e){"use strict";e.r(n);e(5),e(0);var t=e(2),c=e.n(t),a=e(3);c.a.render(function(r,n){var e="hi ".concat(r," bruu and u are ").concat(n);return Object(a.jsxs)("p",{children:["lmao so this works? : ",e]})}("sid",19),document.querySelector("#root"))},5:function(r,n,e){}},[[4,1,2]]]);
+//# sourceMappingURL=main.4799cdf0.chunk.js.map
