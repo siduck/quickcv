@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-gap: 2rem;
+}
+
+.modeswitcher {
+  border-radius: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 0.5rem;
+}
+
+.editBtn,
+.previewBtn,
+.savebtn {
+  font-size: 1rem;
+  justify-content: space-evenly;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  grid-gap: 0.5rem;
+}
+
+.savebtn {
+  background-color: white;
+  border-radius: 5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.saveIcon {
+  background-color: #36404c;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.editBtn {
+  background-color: #c0e4fe;
+  border-radius: 5rem;
+}
