@@ -10,9 +10,9 @@ function ModeSwitcher() {
         Edit
       </div>
 
-      <div className="previewBtn">
-        <AppWindow className="previewIcon" size={24} weight="fill" />
-        Preview
+      <div className="viewBtn">
+        <AppWindow className="viewIcon" size={24} weight="fill" />
+        View
       </div>
     </div>
   );

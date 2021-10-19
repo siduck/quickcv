@@ -14,14 +14,13 @@
 .modeswitcher {
   border-radius: 5rem;
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  background-color: white;
+  grid-template-columns: 1fr 1fr;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 0.5rem;
 }
 
 .editBtn,
-.previewBtn,
+.viewBtn,
 .savebtn {
   font-size: 1rem;
   justify-content: space-evenly;
@@ -32,7 +31,6 @@
 }
 
 .savebtn {
-  background-color: white;
   border-radius: 5rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
