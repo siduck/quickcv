@@ -66,11 +66,73 @@ class About extends Component {
   }
 }
 
+function InfoItems(props) {
+  return (
+    <>
+      {Array.from(Array(props.n)).map(() => (
+        <div
+          className={props.type === "workExp"
+            ? "workExpList "
+            : "educationInfoList"}
+        >
+          <Input
+            info={props.type === "workExp" ? "Company" : "University Name"}
+            key={uniqid}
+          />
+          <Input
+            info={props.type === "workExp" ? "Position" : "Degree"}
+            key={uniqid}
+          />
+          <Input info="City" key={uniqid} />
+          <Input info="From year" key={uniqid} />
+          <Input info="To year" key={uniqid} />
+        </div>
+      ))}
+    </>
+  );
+}
+
+class WorkExperience extends Component {
+  constructor() {
+    super();
+    this.state = {
+      workExp: 0,
+      educationInfo: 0,
+    };
+
+    this.addWorkExp = this.addWorkExp.bind(this);
+    this.addEducationInfo = this.addEducationInfo.bind(this);
+  }
+
+  addWorkExp() {
+    this.setState({ workExp: this.state.workExp + 1 });
+  }
+
+  addEducationInfo() {
+    this.setState({ educationInfo: this.state.educationInfo + 1 });
+  }
+
+  render() {
+    return (
+      <div className="workExperienceList">
+        <h3>Work Experience</h3>
+        <InfoItems n={this.state.workExp} type="workExp" />
+        <button onClick={this.addWorkExp}>add</button>
+
+        <h3>Education</h3>
+        <InfoItems n={this.state.educationInfo} type="educationInfo" />
+        <button onClick={this.addEducationInfo}>add</button>
+      </div>
+    );
+  }
+}
+
 export default function Editor() {
   return (
     <div className="editor">
       <PersonalInfo />
       <About />
+      <WorkExperience />
     </div>
   );
 }

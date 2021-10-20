@@ -9,10 +9,16 @@
 }
 
 .personalInfo,
-.aboutMe {
+.aboutMe,
+.workExpList
+,.educationInfoList{
   display: grid;
   grid-template-columns: 1fr;
 }
+/*  */
+/* .educationInfoList { */
+/*   background-color: pink; */
+/* } */
 
 .skillItem {
   display: grid;
@@ -21,10 +27,10 @@
 }
 
 .skillItem input {
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
-h3 {
+h3 , h4{
   text-align: center;
 }
 
@@ -48,5 +54,5 @@ button {
 button:hover {
   cursor: pointer;
   transform: scale(1.2);
-  transform: .4s;
+  transform: 0.4s;
 }
