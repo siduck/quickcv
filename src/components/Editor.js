@@ -16,7 +16,7 @@ function PersonalInfo() {
       <Input info="Title" />
       <Input info="Phone number" />
       <Input info="Email" />
-      <Input info="Profile Image url" />
+      <Input info="profile image url" />
       <Input info="Address" />
     </div>
   );
@@ -24,10 +24,13 @@ function PersonalInfo() {
 
 function Skills(props) {
   return (
-    <div className="skillsList">
-      {Array.from(Array(props.n)).map(() =>
-        <Input info="your skill" key={uniqid} />
-      )}
+    <div>
+      {Array.from(Array(props.n)).map(() => (
+        <div className="skillItem">
+          <Input info="your skill" key={uniqid} />
+          <Input info="percentage" key={uniqid} />
+        </div>
+      ))}
     </div>
   );
 }
