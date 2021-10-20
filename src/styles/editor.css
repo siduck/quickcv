@@ -4,11 +4,14 @@
   /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
   margin: 2rem 20rem;
   border: 3px solid #f6f6f6;
-}
-
-.personalInfo {
   display: grid;
   justify-content: center;
+}
+
+.personalInfo,
+.aboutMe {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 h3 {
@@ -19,6 +22,15 @@ input {
   padding: 0.8rem 1rem;
   border: none;
   outline: none;
-  margin: 0.5rem;
+  margin: 0.5rem 4rem;
   border: 1px solid #36404c;
+}
+
+button {
+  margin: 1rem 16rem;
+  outline: none;
+  border: none;
+  background-color: pink;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
 }
