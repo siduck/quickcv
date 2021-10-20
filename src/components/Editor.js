@@ -24,9 +24,9 @@ function PersonalInfo() {
 
 function Skills(props) {
   return (
-    <div>
+    <div className="skillsList">
       {Array.from(Array(props.n)).map(() =>
-        <Input info="a skill" key={uniqid} />
+        <Input info="your skill" key={uniqid} />
       )}
     </div>
   );
@@ -50,14 +50,12 @@ class About extends Component {
 
   render() {
     return (
-      <div>
-        <div className="aboutMe">
-          <h3>About me</h3>
-          <Input info="Description" />
+      <div className="aboutMe">
+        <h3>About me</h3>
+        <Input info="Description" />
 
-          <h3>Skills</h3>
-          <Skills n={this.state.skills} />
-        </div>
+        <h3>Skills</h3>
+        <Skills n={this.state.skills} />
 
         <button onClick={this.addSkill}>add</button>
       </div>

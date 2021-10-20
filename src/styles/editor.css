@@ -9,7 +9,8 @@
 }
 
 .personalInfo,
-.aboutMe {
+.aboutMe,
+.skillsList {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -31,6 +32,6 @@ button {
   outline: none;
   border: none;
   background-color: pink;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 0.4rem;
 }
