@@ -24,14 +24,14 @@ function PersonalInfo() {
 
 function Skills(props) {
   return (
-    <div>
+    <>
       {Array.from(Array(props.n)).map(() => (
         <div className="skillItem">
           <Input info="your skill" key={uniqid} />
           <Input info="percentage" key={uniqid} />
         </div>
       ))}
-    </div>
+    </>
   );
 }
 

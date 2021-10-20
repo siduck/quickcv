@@ -44,3 +44,9 @@ button {
   padding: 1rem;
   border-radius: 0.4rem;
 }
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transform: .4s;
+}
