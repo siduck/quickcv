@@ -1,45 +1,57 @@
 .editor {
   padding: 1rem 2rem 2rem 1rem;
-  /* border-radius: 0.5rem; */
-  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  border-radius: 0.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin: 2rem 20rem;
-  border: 3px solid #f6f6f6;
+  /* border: 3px solid #36404c; */
+  background: #caf7e3;
   display: grid;
   justify-content: center;
 }
 
 .personalInfo,
-.aboutMe,
-.workExpList
-,.educationInfoList{
+.skillsInput {
   display: grid;
   grid-template-columns: 1fr;
+  margin: 2rem 20rem;
+  color: black;
 }
-/*  */
-/* .educationInfoList { */
-/*   background-color: pink; */
-/* } */
 
+.iteminfolists {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: 2rem 20rem;
+}
+
+.workExpList,
+.educationInfoList {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.skillItem input {
+  margin: 0.5rem;
+}
 .skillItem {
   display: grid;
   grid-template-columns: 70% 30%;
   margin: 0.5rem 3.5rem;
 }
 
-.skillItem input {
-  margin: 0.5rem;
-}
-
-h3 , h4{
+h3,
+h4 {
   text-align: center;
+  color: #36404c;
 }
 
 input {
-  padding: 0.8rem 1rem;
+  padding: 1rem;
   border: none;
   outline: none;
-  margin: 0.5rem 4rem;
-  border: 1px solid #36404c;
+  margin: 0rem 4rem;
+  font-size: 1.0rem;
 }
 
 button {
@@ -49,6 +61,10 @@ button {
   background-color: pink;
   padding: 1rem;
   border-radius: 0.4rem;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #36404c;
+  color: white;
 }
 
 button:hover {

@@ -16,13 +16,16 @@ function PersonalInfo() {
       <Input info="Title" />
       <Input info="Phone number" />
       <Input info="Email" />
-      <Input info="profile image url" />
-      <Input info="Address" />
+      <Input info="Profile image url" />
+      <Input info="Address" style={{ background: "pink" }} />
+
+      <h3>About me</h3>
+      <Input info="Description" />
     </div>
   );
 }
 
-function Skills(props) {
+function SkillsList(props) {
   return (
     <>
       {Array.from(Array(props.n)).map(() => (
@@ -35,11 +38,19 @@ function Skills(props) {
   );
 }
 
-class About extends Component {
+let skillsList = [];
+
+class Skills extends Component {
   constructor() {
     super();
     this.state = {
-      skills: 1,
+      numberOfskills: 1,
+      id: uniqid(),
+
+      skill: {
+        desc: "",
+        percentage: "",
+      },
     };
 
     this.addSkill = this.addSkill.bind(this);
@@ -47,19 +58,24 @@ class About extends Component {
 
   addSkill() {
     this.setState({
-      skills: this.state.skills + 1,
+      numberOfskills: this.state.numberOfskills + 1,
+    });
+  }
+
+  handleChange(e) {
+    this.setState({
+      skill: {
+        desc: e.target.value,
+        percentage: "",
+      },
     });
   }
 
   render() {
     return (
-      <div className="aboutMe">
-        <h3>About me</h3>
-        <Input info="Description" />
-
+      <div className="skillsInput">
         <h3>Skills</h3>
-        <Skills n={this.state.skills} />
-
+        <SkillsList n={this.state.numberOfskills} />
         <button onClick={this.addSkill}>add</button>
       </div>
     );
@@ -86,6 +102,7 @@ function InfoItems(props) {
           <Input info="City" key={uniqid} />
           <Input info="From year" key={uniqid} />
           <Input info="To year" key={uniqid} />
+          <br />
         </div>
       ))}
     </>
@@ -114,7 +131,7 @@ class WorkExperience extends Component {
 
   render() {
     return (
-      <div className="workExperienceList">
+      <div className="iteminfolists">
         <h3>Work Experience</h3>
         <InfoItems n={this.state.workExp} type="workExp" />
         <button onClick={this.addWorkExp}>add</button>
@@ -131,7 +148,7 @@ export default function Editor() {
   return (
     <div className="editor">
       <PersonalInfo />
-      <About />
+      <Skills />
       <WorkExperience />
     </div>
   );
