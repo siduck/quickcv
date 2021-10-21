@@ -3,8 +3,16 @@ import React, { Component } from "react";
 
 import uniqid from "uniqid";
 
+import { personalData } from "../cvData";
+
 function Input(props) {
-  return <input type="text" placeholder={props.info} />;
+  return <input type="text" placeholder={props.info} onChange={fillData} />;
+}
+
+function fillData(e) {
+  let val = e.target.value;
+  personalData[e.target.placeholder] = val;
+  // console.log(personalData);
 }
 
 function PersonalInfo() {
@@ -14,10 +22,10 @@ function PersonalInfo() {
 
       <Input info="Name" />
       <Input info="Title" />
-      <Input info="Phone number" />
+      <Input info="Phone" />
       <Input info="Email" />
-      <Input info="Profile image url" />
-      <Input info="Address" style={{ background: "pink" }} />
+      <Input info="ImageUrl" />
+      <Input info="Address" />
 
       <h3>About me</h3>
       <Input info="Description" />
@@ -38,8 +46,6 @@ function SkillsList(props) {
   );
 }
 
-let skillsList = [];
-
 class Skills extends Component {
   constructor() {
     super();
@@ -54,21 +60,23 @@ class Skills extends Component {
     };
 
     this.addSkill = this.addSkill.bind(this);
-  }
-
-  addSkill() {
-    this.setState({
-      numberOfskills: this.state.numberOfskills + 1,
-    });
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
     this.setState({
       skill: {
         desc: e.target.value,
-        percentage: "",
+        percentage: e.targe.value,
       },
     });
+  }
+  addSkill() {
+    this.setState({
+      numberOfskills: this.state.numberOfskills + 1,
+    });
+
+    alert(this.state.skill.desc);
   }
 
   render() {
