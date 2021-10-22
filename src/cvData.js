@@ -9,3 +9,5 @@ export let personalData = {
 };
 
 export let skillsList = [];
+export let educationInfoList = [];
+export let workExperiencesList = [];

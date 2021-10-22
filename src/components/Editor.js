@@ -1,10 +1,9 @@
 import "../styles/editor.css";
 import React, { Component } from "react";
 
-import uniqid from "uniqid";
-
 import { personalData } from "../cvData";
 
+// use this for personal data for now
 function Input(props) {
   return <input type="text" placeholder={props.info} onChange={fillData} />;
 }
@@ -12,7 +11,8 @@ function Input(props) {
 function fillData(e) {
   let val = e.target.value;
   personalData[e.target.placeholder] = val;
-  // console.log(personalData);
+
+  // console.log(personalData); check if the object's getting updated
 }
 
 function PersonalInfo() {
@@ -33,50 +33,38 @@ function PersonalInfo() {
   );
 }
 
+function SkillsInput(props) {
+  return <input type="text" placeholder={props.info} />;
+}
+
 function SkillsList(props) {
   return (
     <>
       {Array.from(Array(props.n)).map(() => (
         <div className="skillItem">
-          <Input info="your skill" key={uniqid} />
-          <Input info="percentage" key={uniqid} />
+          <SkillsInput info="your skill" />
+          <SkillsInput info="percentage" />
         </div>
       ))}
     </>
   );
 }
 
+// using numberOfskills just to add new input elements
 class Skills extends Component {
   constructor() {
     super();
     this.state = {
       numberOfskills: 1,
-      id: uniqid(),
-
-      skill: {
-        desc: "",
-        percentage: "",
-      },
     };
 
     this.addSkill = this.addSkill.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
-    this.setState({
-      skill: {
-        desc: e.target.value,
-        percentage: e.targe.value,
-      },
-    });
-  }
   addSkill() {
     this.setState({
       numberOfskills: this.state.numberOfskills + 1,
     });
-
-    alert(this.state.skill.desc);
   }
 
   render() {
@@ -101,15 +89,13 @@ function InfoItems(props) {
         >
           <Input
             info={props.type === "workExp" ? "Company" : "University Name"}
-            key={uniqid}
           />
           <Input
             info={props.type === "workExp" ? "Position" : "Degree"}
-            key={uniqid}
           />
-          <Input info="City" key={uniqid} />
-          <Input info="From year" key={uniqid} />
-          <Input info="To year" key={uniqid} />
+          <Input info="City" />
+          <Input info="From year" />
+          <Input info="To year" />
           <br />
         </div>
       ))}
