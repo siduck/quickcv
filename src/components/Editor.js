@@ -1,18 +1,10 @@
 import "../styles/editor.css";
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-import { personalData } from "../cvData";
+import { personalData } from "../cvData"; // save overall input data here
 
-// use this for personal data for now
 function Input(props) {
-  return <input type="text" placeholder={props.info} onChange={fillData} />;
-}
-
-function fillData(e) {
-  let val = e.target.value;
-  personalData[e.target.placeholder] = val;
-
-  // console.log(personalData); check if the object's getting updated
+  return <input type="text" placeholder={props.info} />;
 }
 
 function PersonalInfo() {
@@ -33,66 +25,39 @@ function PersonalInfo() {
   );
 }
 
-function SkillsInput(props) {
-  return <input type="text" placeholder={props.info} />;
-}
-
-function SkillsList(props) {
+function Skill(props) {
   return (
     <>
-      {Array.from(Array(props.n)).map(() => (
+      {Array.from(Array(props.list)).map(() => (
         <div className="skillItem">
-          <SkillsInput info="your skill" />
-          <SkillsInput info="percentage" />
+          <Input info="your skill" />
+          <Input info="percentage" />
         </div>
       ))}
     </>
   );
 }
 
-// using numberOfskills just to add new input elements
-class Skills extends Component {
-  constructor() {
-    super();
-    this.state = {
-      numberOfskills: 1,
-    };
+function Skills() {
+  const [skillslist, set_numberOfSkills] = useState(0);
 
-    this.addSkill = this.addSkill.bind(this);
-  }
+  return (
+    <div className="skillsInput">
+      <h3>Skills</h3>
+      <Skill list={skillslist} />
 
-  addSkill() {
-    this.setState({
-      numberOfskills: this.state.numberOfskills + 1,
-    });
-  }
-
-  render() {
-    return (
-      <div className="skillsInput">
-        <h3>Skills</h3>
-        <SkillsList n={this.state.numberOfskills} />
-        <button onClick={this.addSkill}>add</button>
-      </div>
-    );
-  }
+      <button onClick={() => set_numberOfSkills(skillslist + 1)}>add</button>
+    </div>
+  );
 }
 
-function InfoItems(props) {
+function WorkExperience(props) {
   return (
     <>
-      {Array.from(Array(props.n)).map(() => (
-        <div
-          className={props.type === "workExp"
-            ? "workExpList "
-            : "educationInfoList"}
-        >
-          <Input
-            info={props.type === "workExp" ? "Company" : "University Name"}
-          />
-          <Input
-            info={props.type === "workExp" ? "Position" : "Degree"}
-          />
+      {Array.from(Array(props.list)).map(() => (
+        <div className="workExpList">
+          <Input info="Company" />
+          <Input info="Position" />
           <Input info="City" />
           <Input info="From year" />
           <Input info="To year" />
@@ -103,39 +68,17 @@ function InfoItems(props) {
   );
 }
 
-class WorkExperience extends Component {
-  constructor() {
-    super();
-    this.state = {
-      workExp: 0,
-      educationInfo: 0,
-    };
+function WorkExperiences() {
+  const [workExpList, set_numberOfWorkExps] = useState(0);
 
-    this.addWorkExp = this.addWorkExp.bind(this);
-    this.addEducationInfo = this.addEducationInfo.bind(this);
-  }
+  return (
+    <div className="iteminfolists">
+      <h3>Work Experience</h3>
+      <WorkExperience list={workExpList} />
 
-  addWorkExp() {
-    this.setState({ workExp: this.state.workExp + 1 });
-  }
-
-  addEducationInfo() {
-    this.setState({ educationInfo: this.state.educationInfo + 1 });
-  }
-
-  render() {
-    return (
-      <div className="iteminfolists">
-        <h3>Work Experience</h3>
-        <InfoItems n={this.state.workExp} type="workExp" />
-        <button onClick={this.addWorkExp}>add</button>
-
-        <h3>Education</h3>
-        <InfoItems n={this.state.educationInfo} type="educationInfo" />
-        <button onClick={this.addEducationInfo}>add</button>
-      </div>
-    );
-  }
+      <button onClick={() => set_numberOfWorkExps(workExpList + 1)}>add</button>
+    </div>
+  );
 }
 
 export default function Editor() {
@@ -143,7 +86,7 @@ export default function Editor() {
     <div className="editor">
       <PersonalInfo />
       <Skills />
-      <WorkExperience />
+      <WorkExperiences />
     </div>
   );
 }
