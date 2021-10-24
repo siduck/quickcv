@@ -1,10 +1,9 @@
 .editor {
-  padding: 1rem 2rem 2rem 1rem;
+  padding: 0rem 2rem 2rem 1rem;
   border-radius: 0.5rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin: 2rem 20rem;
-  /* border: 3px solid #36404c; */
-  background: #caf7e3;
+  margin: 2rem 15rem;
+  background: #c0e4fe;
   display: grid;
   justify-content: center;
 }
@@ -13,30 +12,22 @@
 .skillsInput {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 2rem 20rem;
   color: black;
+  padding: 2rem;
 }
 
-.iteminfolists {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  margin: 2rem 20rem;
-}
-
-.workExpList,
-.educationInfoList {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
+.personalInfo {
+  padding: 2rem 5rem;
+  padding-bottom: 0rem;
 }
 
 .skillItem input {
-  margin: 0.5rem;
+  border: none;
 }
+
 .skillItem {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 50% 37% 13%;
   margin: 0.5rem 3.5rem;
 }
 
@@ -50,18 +41,18 @@ input {
   padding: 1rem;
   border: none;
   outline: none;
-  margin: 0rem 4rem;
-  font-size: 1.0rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-button {
+button,
+.deleteSkillBtn {
   margin: 1rem 16rem;
   outline: none;
   border: none;
-  background-color: pink;
   padding: 1rem;
   border-radius: 0.4rem;
-
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: #36404c;
   color: white;
@@ -71,4 +62,19 @@ button:hover {
   cursor: pointer;
   transform: scale(1.2);
   transform: 0.4s;
+}
+
+.deleteSkillBtn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transform: 0.4s;
+}
+
+.deleteSkillBtn {
+  margin: 0.5rem;
+  display: flex;
+  padding: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  color: #fb9199;
 }
