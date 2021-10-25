@@ -34,14 +34,14 @@ export default function Skills() {
         <div className="skillItem" key={index}>
           <input
             type="text"
-            placeholder="Title"
+            placeholder="title"
             value={inputField.title}
             key={`title_${index}`}
             onChange={(event) => handleChangeInput(index, event)}
           />
           <input
             type="text"
-            placeholder="Percentage"
+            placeholder="percentage"
             value={inputField.percentage}
             key={`percentage_${index}`}
             onChange={(event) => handleChangeInput(index, event)}
