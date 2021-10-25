@@ -28,15 +28,15 @@ function Savebtn() {
   );
 }
 
-export function Navbar() {
+export default function Navbar() {
   return (
     <div className="navbar">
       <h2>
         CV Create
       </h2>
 
-        <ModeSwitcher />
-        <Savebtn />
+      <ModeSwitcher />
+      <Savebtn />
     </div>
   );
 }

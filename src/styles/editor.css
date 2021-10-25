@@ -1,34 +1,74 @@
 .editor {
   padding: 0rem 2rem 2rem 1rem;
   border-radius: 0.5rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin: 2rem 15rem;
-  background: #c0e4fe;
   display: grid;
   justify-content: center;
 }
 
 .personalInfo,
-.skillsInput {
+.skillsInput,
+.workExperienceList {
   display: grid;
   grid-template-columns: 1fr;
   color: black;
   padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+/* personal info */
 .personalInfo {
   padding: 2rem 5rem;
-  padding-bottom: 0rem;
+  background-color: #caf7e3;
 }
+
+.personalInfo .lists {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* Skills */
 
 .skillItem input {
   border: none;
+  margin: 0.5rem;
+  border: 2px solid #36404c;
 }
 
 .skillItem {
   display: grid;
   grid-template-columns: 50% 37% 13%;
   margin: 0.5rem 3.5rem;
+}
+
+/* Work Experience stuff */
+
+.workExperience .deleteInput,
+.workExperience button {
+  margin: 0rem;
+}
+
+.workExperience .lists {
+  border-radius: 0 0 0.5rem 0.5rem;
+  border: 2px solid #36404c;
+}
+
+.lists {
+  margin: 0rem;
+  border-radius: 0;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.workExperience {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 3rem;
+  justify-content: center;
+  margin: 1rem;
 }
 
 h3,
@@ -42,12 +82,13 @@ input {
   border: none;
   outline: none;
   font-size: 1rem;
-  margin: 0.5rem;
+  margin: 0rem;
   border-radius: 0.5rem;
 }
 
 button,
-.deleteSkillBtn {
+.deleteInput,
+.newInput {
   margin: 1rem 16rem;
   outline: none;
   border: none;
@@ -64,17 +105,25 @@ button:hover {
   transform: 0.4s;
 }
 
-.deleteSkillBtn:hover {
+.deleteInput:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  color: lavender;
   transform: 0.4s;
 }
 
-.deleteSkillBtn {
+.deleteInput,
+.newInput {
   margin: 0.5rem;
   display: flex;
   padding: 0.2rem;
   justify-content: center;
   align-items: center;
   color: #fb9199;
+}
+
+.workExperience .deleteInput {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 0.5rem 0.5rem 0rem 0;
+  padding: 0.3rem 0.6rem;
 }

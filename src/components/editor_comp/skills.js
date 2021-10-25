@@ -2,6 +2,8 @@ import "../../styles/editor.css";
 import { Trash } from "phosphor-react";
 import React, { useState } from "react";
 
+export let skillsList;
+
 export default function Skills() {
   const [inputFields, setInputField] = useState([{
     title: "",
@@ -12,7 +14,8 @@ export default function Skills() {
     const values = [...inputFields];
     values[index][event.target.placeholder] = event.target.value;
     setInputField(values);
-    console.log(inputFields);
+
+    skillsList = values;
   }
 
   function newSkill(e) {
@@ -30,25 +33,26 @@ export default function Skills() {
     <div className="skillsInput">
       <h3>Skills</h3>
 
-      {inputFields.map((inputField, index) => (
+      {inputFields.map((
+        inputField,
+        index,
+      ) => (
         <div className="skillItem" key={index}>
           <input
             type="text"
             placeholder="title"
             value={inputField.title}
-            key={`title_${index}`}
             onChange={(event) => handleChangeInput(index, event)}
           />
           <input
             type="text"
             placeholder="percentage"
             value={inputField.percentage}
-            key={`percentage_${index}`}
             onChange={(event) => handleChangeInput(index, event)}
           />
 
-          <div className="deleteSkillBtn">
-            <Trash onClick={deleteSkill} size={32} weight="fill" />
+          <div className="deleteInput" onClick={deleteSkill}>
+            <Trash size={32} weight="fill" />
           </div>
         </div>
       ))}
