@@ -1,6 +1,6 @@
 .editor {
   padding: 0rem 2rem 2rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   margin: 2rem 15rem;
   display: grid;
   justify-content: center;
@@ -14,7 +14,7 @@
   color: black;
   padding: 2rem;
   margin: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .personalInfo .lists {
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 0.5rem;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .workExperience .lists {
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0  1rem 1rem;
   border: 2px solid #36404c;
 }
 
@@ -83,7 +83,7 @@ input {
   outline: none;
   font-size: 1rem;
   margin: 0rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 button,
@@ -93,7 +93,7 @@ button,
   outline: none;
   border: none;
   padding: 1rem;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: #36404c;
   color: white;
@@ -124,6 +124,6 @@ button:hover {
 .workExperience .deleteInput {
   display: flex;
   justify-content: flex-end;
-  border-radius: 0.5rem 0.5rem 0rem 0;
+  border-radius: 1rem 1rem 0rem 0;
   padding: 0.3rem 0.6rem;
 }

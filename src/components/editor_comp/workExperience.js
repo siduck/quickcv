@@ -1,6 +1,6 @@
 import "../../styles/editor.css";
 
-import { Trash, XCircle } from "phosphor-react";
+import { XCircle } from "phosphor-react";
 import React, { useState } from "react";
 
 export let workExperienceList;

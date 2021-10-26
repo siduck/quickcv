@@ -46,3 +46,15 @@
   background-color: #c0e4fe;
   border-radius: 5rem;
 }
+
+.editBtn:hover {
+  cursor: pointer;
+  background-color: #36404c;
+  color: #c0e4fe;
+}
+
+.viewBtn:hover {
+  cursor: pointer;
+  background-color: #36404c;
+  color: #c0e4fe;
+}
