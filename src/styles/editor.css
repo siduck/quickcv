@@ -8,7 +8,7 @@
 
 .personalInfo,
 .skillsInput,
-.workExperienceList {
+.listofInputs {
   display: grid;
   grid-template-columns: 1fr;
   color: black;
@@ -45,12 +45,12 @@
 
 /* Work Experience stuff */
 
-.workExperience .deleteInput,
-.workExperience button {
+.listContainer .deleteInput,
+.listContainer button {
   margin: 0rem;
 }
 
-.workExperience .lists {
+.listContainer .lists {
   border-radius: 0 0  1rem 1rem;
   border: 2px solid #36404c;
 }
@@ -63,7 +63,7 @@
   grid-template-columns: 1fr;
 }
 
-.workExperience {
+.listContainer {
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 3rem;
@@ -121,7 +121,7 @@ button:hover {
   color: #fb9199;
 }
 
-.workExperience .deleteInput {
+.listContainer .deleteInput {
   display: flex;
   justify-content: flex-end;
   border-radius: 1rem 1rem 0rem 0;

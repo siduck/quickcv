@@ -13,7 +13,7 @@ export function App() {
         setEditMode={() => setMode("edit")}
         setViewMode={() => setMode("view")}
       />
-      {mode == "edit" ? <Editor /> : <View />}
+      {mode === "edit" ? <Editor /> : <View />}
     </div>
   );
 }

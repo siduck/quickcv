@@ -43,22 +43,22 @@ export default function Education() {
     }]);
   }
 
-  function deleteWorkExp(index) {
+  function removeInput(index) {
     const values = [...inputFields];
     values.splice(index, 1);
     setInputField(values);
   }
 
   return (
-    <div className="workExperienceList">
+    <div className="listofInputs">
       <h3>Education</h3>
 
       {inputFields.map((
         inputField,
         index,
       ) => (
-        <div className="workExperience" key={index}>
-          <div className="deleteInput" onClick={deleteWorkExp}>
+        <div className="listContainer" key={index}>
+          <div className="deleteInput" onClick={removeInput}>
             <XCircle size={32} weight="fill" />
           </div>
 
