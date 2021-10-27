@@ -1,9 +1,15 @@
 import "../../styles/editor.css";
 
+import { newRidgeState } from "react-ridge-state";
 import { XCircle } from "phosphor-react";
-import React, { useState } from "react";
+import React from "react";
 
-export let workExperienceList;
+export const workExperience_data = newRidgeState([{
+  Company: "",
+  Position: "",
+  From: "",
+  To: "",
+}]);
 
 function Input(props) {
   return (
@@ -17,19 +23,13 @@ function Input(props) {
 }
 
 export default function WorkExperience() {
-  const [inputFields, setInputField] = useState([{
-    Company: "",
-    Position: "",
-    From: "",
-    To: "",
-  }]);
+  let [inputFields, setInputField] = workExperience_data.use();
 
   function handleChangeInput(index, event) {
     const values = [...inputFields];
 
     values[index][event.target.placeholder] = event.target.value;
     setInputField(values);
-    workExperienceList = values;
   }
 
   function newInput(e) {
@@ -65,24 +65,20 @@ export default function WorkExperience() {
           <div className="lists">
             <Input
               info="Company"
-              value={inputField.Company}
               onChange={(event) => handleChangeInput(index, event)}
             />
 
             <Input
               info="Position"
-              value={inputField.Position}
               onChange={(event) => handleChangeInput(index, event)}
             />
 
             <Input
               info="From"
-              value={inputField.From}
               onChange={(event) => handleChangeInput(index, event)}
             />
             <Input
               info="To"
-              value={inputField.To}
               onChange={(event) => handleChangeInput(index, event)}
             />
           </div>

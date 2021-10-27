@@ -106,13 +106,15 @@
   display: grid;
 }
 
-.aboutEducation_list {
+.aboutEducation_list,
+.aboutWorkExperience_List {
   display: grid;
   grid-template-rows: 1fr;
   gap: 1rem;
 }
 
-.educationItem {
+.educationItem,
+.workExperienceItem {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
@@ -121,11 +123,11 @@
   border-radius: 1rem;
 }
 
-.educationTime {
+.timeTitle {
   font-size: 1.1rem;
   font-weight: bolder;
 }
 
-.education_content {
+.contentText {
   gap: 1rem;
 }
