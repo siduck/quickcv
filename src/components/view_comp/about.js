@@ -1,9 +1,9 @@
 import React from "react";
-import { userSkills, workExperience } from "../store";
 
 import { personalInfo_data } from "../editor_comp/personalInfo";
 import { education_data } from "../editor_comp/education";
 import { workExperience_data } from "../editor_comp/workExperience";
+import { skills_data } from "../editor_comp/skills";
 
 function AboutUser() {
   let tmp = personalInfo_data.useValue();
@@ -16,24 +16,26 @@ function AboutUser() {
   );
 }
 
-function Askillk() {
-  return (
-    <div className="skill">
-      {userSkills[0]}
-    </div>
-  );
-}
-
 function Skills() {
+  let tmp = skills_data.useValue();
+
   return (
     <div className="skillsViewer">
       <h2 className="aboutSkills">SKILLS</h2>
 
       <div className="aboutSkills_list">
-        <Askillk />
-        <Askillk />
-        <Askillk />
-        <Askillk />
+        {tmp.map((
+          item,
+          index,
+        ) => (
+          <div className="skillInfo" key={`skill_${index}`}>
+            <div className="skillTitle">{item.Title}</div>
+            <div className="skillPercentage">
+              <div className="bar" style={{ width: `${item.Percentage}%` }}>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -47,8 +49,11 @@ function EducationInfo() {
       <h2 className="aboutEducation">EDUCATION</h2>
 
       <div className="aboutEducation_list">
-        {tmp.map((item) => (
-          <div className="educationItem">
+        {tmp.map((
+          item,
+          index,
+        ) => (
+          <div className="educationItem" key={`education_${index}`}>
             <div className="timeTitle">
               {`${item.From} - ${item.To} `}
             </div>
@@ -76,8 +81,11 @@ function WorkExperienceInfo() {
       <h2 className="aboutWorkExperience">WORK EXPERIENCE</h2>
 
       <div className="aboutWorkExperience_List">
-        {tmp.map((item) => (
-          <div className="workExperienceItem">
+        {tmp.map((
+          item,
+          index,
+        ) => (
+          <div className="workExperienceItem" key={`workExperience_${index}`}>
             <div className="timeTitle">
               {`${item.From} - ${item.To} `}
             </div>

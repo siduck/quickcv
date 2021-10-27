@@ -50,7 +50,6 @@
 }
 
 .userImage img {
-  border: 3px solid var(--darkfg);
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
@@ -94,8 +93,9 @@
 
 .separatorLine {
   padding: 0.1rem;
-  background: var(--grey);
-  width: 1px;
+  width: 0.1rem;
+  border-right: 2px solid var(--darkfg);
+  background-color: white;
   margin: 0 3rem;
 }
 
@@ -130,4 +130,31 @@
 
 .contentText {
   gap: 1rem;
+}
+
+.skillsViewer {
+  display: grid;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid #e6e6e6;
+}
+
+.skillInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+}
+
+.skillPercentage {
+  padding: 0.5rem;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  background: var(--darkfg);
+}
+
+.skillPercentage .bar {
+  background-color: white;
+  border-radius: 1rem;
+  height: 100%;
 }

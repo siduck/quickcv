@@ -16,7 +16,6 @@ function Input(props) {
     <input
       type="text"
       placeholder={props.info}
-      value={props.value}
       onChange={props.onChange}
     />
   );
@@ -32,9 +31,7 @@ export default function Education() {
     setInputField(values);
   }
 
-  function newInput(e) {
-    e.preventDefault();
-
+  function newInput() {
     setInputField([...inputFields, {
       University: "",
       Qualification: "",
@@ -58,7 +55,7 @@ export default function Education() {
         index,
       ) => (
         <div className="listContainer" key={index}>
-          <div className="deleteInput" onClick={removeInput}>
+          <div className="deleteInput" onClick={() => removeInput(index)}>
             <XCircle size={32} weight="fill" />
           </div>
 

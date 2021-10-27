@@ -1,25 +1,36 @@
 import "../../styles/editor.css";
-import { Trash } from "phosphor-react";
-import React, { useState } from "react";
 
-export let skillsList;
+import { Trash } from "phosphor-react";
+import React from "react";
+import { newRidgeState } from "react-ridge-state";
+
+export const skills_data = newRidgeState([{
+  Title: "",
+  Percentage: "",
+}]);
+
+function Input(props) {
+  return (
+    <input
+      type="text"
+      placeholder={props.info}
+      onChange={props.onChange}
+    />
+  );
+}
 
 export default function Skills() {
-  const [inputFields, setInputField] = useState([{
-    Title: "",
-  }]);
+  let [inputFields, setInputField] = skills_data.use();
 
   function handleChangeInput(index, event) {
     const values = [...inputFields];
+
     values[index][event.target.placeholder] = event.target.value;
     setInputField(values);
-
-    skillsList = values;
   }
 
-  function newSkill(e) {
-    e.preventDefault();
-    setInputField([...inputFields, { Title: "" }]);
+  function newSkill() {
+    setInputField([...inputFields, { Title: "", Percentage: "" }]);
   }
 
   function deleteSkill(index) {
@@ -37,13 +48,15 @@ export default function Skills() {
         index,
       ) => (
         <div className="skillItem" key={index}>
-          <input
-            type="text"
-            placeholder="Title"
-            value={inputField.Title}
+          <Input
+            info="Title"
             onChange={(event) => handleChangeInput(index, event)}
           />
-          <div className="deleteInput" onClick={deleteSkill}>
+          <Input
+            info="Percentage"
+            onChange={(event) => handleChangeInput(index, event)}
+          />
+          <div className="deleteInput" onClick={() => deleteSkill(index)}>
             <Trash size={32} weight="fill" />
           </div>
         </div>
