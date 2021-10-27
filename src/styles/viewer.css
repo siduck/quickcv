@@ -101,6 +101,31 @@
 
 /* education details /*/
 
-.educationViewer {
+.educationViewer,
+.education_content {
   display: grid;
+}
+
+.aboutEducation_list {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+
+.educationItem {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  background-color: #fafafa;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.educationTime {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.education_content {
+  gap: 1rem;
 }

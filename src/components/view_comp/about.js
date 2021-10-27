@@ -1,11 +1,16 @@
 import React from "react";
-import { aboutUser, education, userSkills, workExperience } from "../store";
+import { userSkills, workExperience } from "../store";
+
+import { personalInfo_data } from "../editor_comp/personalInfo";
+import { education_data } from "../editor_comp/education";
 
 function AboutUser() {
+  let tmp = personalInfo_data.useValue();
+
   return (
     <div className="aboutDesc">
       <h2 className="aboutTitle">ABOUT ME</h2>
-      {aboutUser}
+      {tmp.Description}
     </div>
   );
 }
@@ -34,21 +39,29 @@ function Skills() {
 }
 
 function EducationInfo() {
+  let tmp = education_data.useValue();
+
   return (
     <div className="educationViewer">
       <h2 className="aboutEducation">EDUCATION</h2>
 
       <div className="aboutEducation_list">
-        <div className="educationTime">
-          {education[0].time}
-        </div>
+        {tmp.map((item) => (
+          <div className="educationItem">
+            <div className="educationTime">
+              {`${item.From} - ${item.To} `}
+            </div>
 
-        <div className="universityTitle">
-          {education[0].university}
-        </div>
-        <div className="qualificationTitle">
-          {education[0].qualification}
-        </div>
+            <div className="education_content">
+              <div className="universityTitle">
+                {item.University}
+              </div>
+              <div className="qualificationTitle">
+                {item.Qualification}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

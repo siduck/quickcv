@@ -1,9 +1,15 @@
 import "../../styles/editor.css";
 
+import { newRidgeState } from "react-ridge-state";
 import { XCircle } from "phosphor-react";
-import React, { useState } from "react";
+import React from "react";
 
-export let educationList;
+export const education_data = newRidgeState([{
+  University: "",
+  Qualification: "",
+  From: "",
+  To: "",
+}]);
 
 function Input(props) {
   return (
@@ -17,19 +23,13 @@ function Input(props) {
 }
 
 export default function Education() {
-  const [inputFields, setInputField] = useState([{
-    University: "",
-    Qualifcation: "",
-    From: "",
-    To: "",
-  }]);
+  let [inputFields, setInputField] = education_data.use();
 
   function handleChangeInput(index, event) {
     const values = [...inputFields];
 
     values[index][event.target.placeholder] = event.target.value;
     setInputField(values);
-    educationList = values;
   }
 
   function newInput(e) {
@@ -37,7 +37,7 @@ export default function Education() {
 
     setInputField([...inputFields, {
       University: "",
-      Qualifcation: "",
+      Qualification: "",
       From: "",
       To: "",
     }]);
@@ -65,24 +65,20 @@ export default function Education() {
           <div className="lists">
             <Input
               info="University"
-              value={inputField.University}
               onChange={(event) => handleChangeInput(index, event)}
             />
 
             <Input
-              info="Qualifcation"
-              value={inputField.Qualifcation}
+              info="Qualification"
               onChange={(event) => handleChangeInput(index, event)}
             />
 
             <Input
               info="From"
-              value={inputField.From}
               onChange={(event) => handleChangeInput(index, event)}
             />
             <Input
               info="To"
-              value={inputField.To}
               onChange={(event) => handleChangeInput(index, event)}
             />
           </div>
