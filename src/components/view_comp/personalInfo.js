@@ -18,18 +18,20 @@ function UserTitles() {
         {cap(tmp.Name)}
       </div>
       <div className="userJob">
-        WEB DESIGNER
+        {cap(tmp.Profession)}
       </div>
     </div>
   );
 }
 
 function UserImage() {
+  let tmp = personalInfo_data.useValue();
+
   return (
     <div className="userImage">
       <img
-        src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
-        alt="james"
+        src={tmp.ImageUrl}
+        alt="profile pic"
       />
     </div>
   );
@@ -37,6 +39,7 @@ function UserImage() {
 
 function Contact(props) {
   const Icon = props.icon;
+
   return (
     <div className="contact">
       <div className="contactIcon">
@@ -48,11 +51,13 @@ function Contact(props) {
 }
 
 function Contacts() {
+  let tmp = personalInfo_data.useValue();
+
   return (
     <div className="Contacts">
-      <Contact icon={Phone} title={"+1 551 404 4934"} />
-      <Contact icon={EnvelopeSimple} title={"lorem@tutanota.com"} />
-      <Contact icon={MapPin} title={"lorem ipsum chifdpu spuc"} />
+      <Contact icon={Phone} title={tmp.Phone} />
+      <Contact icon={EnvelopeSimple} title={tmp.Email} />
+      <Contact icon={MapPin} title={tmp.Address} />
     </div>
   );
 }

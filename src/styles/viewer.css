@@ -5,6 +5,7 @@
 :root {
   --darkfg: #36404c;
   --grey: #78828e;
+  --blue: #c0e4fe;
 }
 
 .viewer {
@@ -49,6 +50,7 @@
 }
 
 .userImage img {
+  border: 3px solid var(--darkfg);
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
@@ -61,7 +63,7 @@
 }
 
 .contactIcon {
-  background-color: #c0e4fe;
+  background-color: var(--blue);
   padding: 0.4rem 0.6rem;
   margin: 0.5rem;
   margin-right: 1rem;
@@ -97,9 +99,8 @@
   margin: 0 3rem;
 }
 
-
 /* education details /*/
 
-.educationViewer{
+.educationViewer {
   display: grid;
 }

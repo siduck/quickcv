@@ -4,6 +4,7 @@ import { newRidgeState } from "react-ridge-state";
 
 let personal_data = {
   Name: "",
+  Profession: "",
   Phone: "",
   Email: "",
   ImageUrl: "",
@@ -33,6 +34,7 @@ export default function PersonalInfo() {
 
       <div className="lists">
         <Input info="Name" />
+        <Input info="Profession" />
         <Input info="Phone" />
         <Input info="Email" />
         <Input info="ImageUrl" />
