@@ -3,11 +3,19 @@ import { EnvelopeSimple, MapPin, Phone } from "phosphor-react";
 
 import "../../styles/viewer.css";
 
+import { personalInfo_data } from "../editor_comp/personalInfo";
+
+function cap(word) {
+  return word.toUpperCase();
+}
+
 function UserTitles() {
+  let tmp = personalInfo_data.useValue();
+
   return (
     <div className="userTitles">
       <div className="userName">
-        JAMES PEARSON
+        {cap(tmp.Name)}
       </div>
       <div className="userJob">
         WEB DESIGNER

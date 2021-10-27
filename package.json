@@ -9,6 +9,7 @@
     "phosphor-react": "^1.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-ridge-state": "^4.2.1",
     "react-scripts": "^3.4.4",
     "web-vitals": "^1.0.1"
   },

@@ -1,7 +1,8 @@
 import "../../styles/editor.css";
 import React from "react";
+import { newRidgeState } from "react-ridge-state";
 
-export let personal_data = {
+let personal_data = {
   Name: "",
   Phone: "",
   Email: "",
@@ -10,12 +11,16 @@ export let personal_data = {
   Description: "",
 };
 
-function handleOnChange(e) {
-  personal_data[e.target.placeholder] = e.target.value;
-  console.log(personal_data);
-}
+export const personalInfo_data = newRidgeState(personal_data);
 
 function Input(props) {
+  let [value, setValue] = personalInfo_data.use();
+
+  function handleOnChange(e) {
+    personal_data[e.target.placeholder] = e.target.value;
+    setValue(value = personal_data);
+  }
+
   return (
     <input type="text" placeholder={props.info} onChange={handleOnChange} />
   );
