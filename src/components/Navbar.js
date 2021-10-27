@@ -1,20 +1,22 @@
 import React from "react";
 import { AppWindow, Download, Pencil } from "phosphor-react";
-
 import "../styles/navbar.css";
 
-export function ModeSwitcher(props) {
+import { newRidgeState } from "react-ridge-state";
+
+export const currentMode = newRidgeState("edit");
+
+export function ModeSwitcher() {
+  let [mode, setMode] = currentMode.use();
+
   return (
     <div className="modeswitcher">
-      <div
-        onClick={props.editMode}
-        className="editBtn"
-      >
+      <div onClick={() => setMode("edit")} className="editBtn">
         <Pencil className="editIcon" size={24} weight="fill" />
         Edit
       </div>
 
-      <div onClick={props.viewMode} className="viewBtn">
+      <div onClick={() => setMode("view")} className="viewBtn">
         <AppWindow className="viewIcon" size={24} weight="fill" />
         View
       </div>
@@ -31,14 +33,14 @@ function Savebtn() {
   );
 }
 
-export default function Navbar(props) {
+export default function Navbar() {
   return (
     <div className="navbar">
       <h2>
         CV Create
       </h2>
 
-      <ModeSwitcher editMode={props.setEditMode} viewMode={props.setViewMode} />
+      <ModeSwitcher />
       <Savebtn />
     </div>
   );
