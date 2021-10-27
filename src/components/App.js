@@ -6,6 +6,7 @@ import View from "./View";
 
 export function App() {
   let mode = currentMode.useValue();
+  
   return (
     <div className="App">
       <Navbar />

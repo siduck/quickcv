@@ -18,7 +18,7 @@ function Input(props) {
 
   function handleOnChange(e) {
     personal_data[e.target.placeholder] = e.target.value;
-    setValue(value = personal_data);
+    setValue(personal_data);
   }
 
   return (

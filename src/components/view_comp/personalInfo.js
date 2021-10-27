@@ -28,7 +28,7 @@ function UserImage() {
   return (
     <div className="userImage">
       <img
-        src="https://i.pinimg.com/564x/85/9a/f7/859af748d1eed0d67d5801a6df188a89.jpg"
+        src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
         alt="james"
       />
     </div>
