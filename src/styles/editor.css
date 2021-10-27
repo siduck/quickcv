@@ -127,3 +127,7 @@ button:hover {
   border-radius: 1rem 1rem 0rem 0;
   padding: 0.3rem 0.6rem;
 }
+
+.hideDiv {
+  display: none;
+}

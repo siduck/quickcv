@@ -13,7 +13,7 @@ export function ModeSwitcher() {
     <div className="modeswitcher">
       <div
         onClick={() => setMode("edit")}
-        className={`editBtn " ${
+        className={`editBtn ${
           mode === "edit" ? "clickedModeBtn" : "unClickedModeBtn"
         }
         `}
@@ -24,7 +24,7 @@ export function ModeSwitcher() {
 
       <div
         onClick={() => setMode("view")}
-        className={`viewBtn " ${
+        className={`viewBtn ${
           mode === "view" ? "clickedModeBtn" : "unClickedModeBtn"
         }
         `}
