@@ -6,8 +6,7 @@ export let skillsList;
 
 export default function Skills() {
   const [inputFields, setInputField] = useState([{
-    title: "",
-    percentage: "",
+    Title: "",
   }]);
 
   function handleChangeInput(index, event) {
@@ -20,7 +19,7 @@ export default function Skills() {
 
   function newSkill(e) {
     e.preventDefault();
-    setInputField([...inputFields, { title: "", percentage: "" }]);
+    setInputField([...inputFields, { Title: "" }]);
   }
 
   function deleteSkill(index) {
@@ -40,17 +39,10 @@ export default function Skills() {
         <div className="skillItem" key={index}>
           <input
             type="text"
-            placeholder="title"
-            value={inputField.title}
+            placeholder="Title"
+            value={inputField.Title}
             onChange={(event) => handleChangeInput(index, event)}
           />
-          <input
-            type="text"
-            placeholder="percentage"
-            value={inputField.percentage}
-            onChange={(event) => handleChangeInput(index, event)}
-          />
-
           <div className="deleteInput" onClick={deleteSkill}>
             <Trash size={32} weight="fill" />
           </div>

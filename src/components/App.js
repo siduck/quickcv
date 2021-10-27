@@ -4,8 +4,8 @@ import Navbar from "./Navbar";
 import Editor from "./Editor";
 import View from "./View";
 
-export function App() {
-  const [mode, setMode] = useState("edit");
+export function App(props) {
+  const [mode, setMode] = useState("view");
 
   return (
     <div className="App">

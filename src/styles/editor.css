@@ -39,7 +39,7 @@
 
 .skillItem {
   display: grid;
-  grid-template-columns: 50% 37% 13%;
+  grid-template-columns: 85% 15%;
   margin: 0.5rem 3.5rem;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .listContainer .lists {
-  border-radius: 0 0  1rem 1rem;
+  border-radius: 0 0 1rem 1rem;
   border: 2px solid #36404c;
 }
 

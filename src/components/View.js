@@ -1,10 +1,13 @@
 import React from "react";
+import PersonalInfo from "../components/view_comp/personalInfo";
+
+import About from "../components/view_comp/about";
 
 export default function View() {
-
   return (
-    <div className="view">
-      <h1>hELOO</h1>
+    <div className="viewer">
+      <PersonalInfo />
+      <About />
     </div>
   );
 }

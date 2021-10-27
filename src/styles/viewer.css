@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap");
+
+:root {
+  --darkfg: #36404c;
+  --grey: #78828e;
+}
+
+.viewer {
+  padding: 4rem 2rem;
+  border: 3px solid var(--darkfg);
+  border-radius: 1rem;
+  margin: 3rem 6rem;
+  color: var(--darkfg);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* personal details*/
+
+.personalInfo_viewer {
+  margin: 2rem 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  column-gap: 3rem;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+.userTitles {
+  display: grid;
+  grid-row-gap: 0.5rem;
+  text-align: center;
+}
+
+.userTitles .userName {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.userTitles .userJob {
+  font-size: 1.3rem;
+  color: var(--grey);
+}
+
+.userImage {
+  display: flex;
+  justify-content: center;
+}
+
+.userImage img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  font-family: "Overpass", sans-serif;
+}
+
+.contactIcon {
+  background-color: #c0e4fe;
+  padding: 0.4rem 0.6rem;
+  margin: 0.5rem;
+  margin-right: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* about section */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.about h2 {
+  text-align: left;
+  font-weight: bolder;
+}
+
+.aboutLeft,
+.aboutRight {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.separatorLine {
+  padding: 0.1rem;
+  background: var(--grey);
+  width: 1px;
+  margin: 0 3rem;
+}
+
+
+/* education details /*/
+
+.educationViewer{
+  display: grid;
+}
