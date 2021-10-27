@@ -11,12 +11,24 @@ export function ModeSwitcher() {
 
   return (
     <div className="modeswitcher">
-      <div onClick={() => setMode("edit")} className="editBtn">
+      <div
+        onClick={() => setMode("edit")}
+        className={`editBtn " ${
+          mode === "edit" ? "clickedModeBtn" : "unClickedModeBtn"
+        }
+        `}
+      >
         <Pencil className="editIcon" size={24} weight="fill" />
         Edit
       </div>
 
-      <div onClick={() => setMode("view")} className="viewBtn">
+      <div
+        onClick={() => setMode("view")}
+        className={`viewBtn " ${
+          mode === "view" ? "clickedModeBtn" : "unClickedModeBtn"
+        }
+        `}
+      >
         <AppWindow className="viewIcon" size={24} weight="fill" />
         View
       </div>

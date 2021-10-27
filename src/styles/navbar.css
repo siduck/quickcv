@@ -28,33 +28,43 @@
   display: flex;
   align-items: center;
   grid-gap: 0.5rem;
+  border-radius: 5rem;
 }
 
 .savebtn {
   border-radius: 5rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #36404c;
+  color: white;
 }
 
 .saveIcon {
-  background-color: #36404c;
-  color: white;
+  background-color: lavenderblush;
+  color: #36404c;
   border-radius: 50%;
   padding: 0.5rem;
 }
 
-.editBtn {
-  background-color: #c0e4fe;
-  border-radius: 5rem;
-}
-
 .editBtn:hover {
   cursor: pointer;
-  background-color: #36404c;
-  color: #c0e4fe;
+  background-color: #f6f6f6;
 }
 
 .viewBtn:hover {
   cursor: pointer;
+  background-color: #f6f6f6;
+}
+
+.savebtn:hover {
+  cursor: pointer;
   background-color: #36404c;
   color: #c0e4fe;
+}
+
+.clickedModeBtn {
+  background-color: #c0e4fe;
+}
+
+.unClickedModeBtn {
+  background-color: #ffffff;
 }
