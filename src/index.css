@@ -6,4 +6,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Open Sans", sans-serif;
   color: #36404c;
+  padding: 0;
 }

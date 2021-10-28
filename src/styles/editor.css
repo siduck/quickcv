@@ -8,6 +8,7 @@
   margin: 2rem 15rem;
   display: grid;
   justify-content: center;
+  animation: smoothLoad 0.3s;
 }
 
 .personalInfo,
@@ -45,6 +46,7 @@
   display: grid;
   grid-template-columns: 57% 30% 13%;
   margin: 0.5rem 3.5rem;
+  animation: smoothLoad 0.4s;
 }
 
 /* Work Experience stuff */
@@ -73,6 +75,7 @@
   padding: 0 3rem;
   justify-content: center;
   margin: 1rem;
+  animation: smoothLoad 0.4s;
 }
 
 h3,
@@ -101,18 +104,17 @@ button,
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: var(--darkbg);
   color: white;
+  transition: 0.1s;
 }
 
 button:hover {
   cursor: pointer;
-  transform: scale(1.2);
-  transform: 0.4s;
+  transform: scale(1.1);
 }
 
 .deleteInput:hover {
   cursor: pointer;
   color: lavender;
-  transform: 0.4s;
 }
 
 .deleteInput,
@@ -134,4 +136,7 @@ button:hover {
 
 .hideDiv {
   display: none;
+}
+
+@media screen and (max-width: 540px) {
 }

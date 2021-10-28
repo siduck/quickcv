@@ -15,6 +15,7 @@
   margin: 3rem 6rem;
   color: var(--darkfg);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  animation: smoothLoad 0.3s;
 }
 
 /* personal details*/

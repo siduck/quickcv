@@ -29,6 +29,7 @@
   align-items: center;
   grid-gap: 0.5rem;
   border-radius: 5rem;
+  transition: ease 0.1s;
 }
 
 .savebtn {
@@ -36,6 +37,7 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: #36404c;
   color: white;
+  transition: ease 0.1s;
 }
 
 .saveIcon {
@@ -67,4 +69,16 @@
 
 .unClickedModeBtn {
   background-color: #ffffff;
+}
+
+/* responsive stuffs */
+
+@media screen and (max-width: 540px) {
+  .navbar h2 {
+    display: none;
+  }
+
+  .navbar {
+    margin-top: 0.5rem;
+  }
 }
