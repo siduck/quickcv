@@ -39,7 +39,7 @@ export function ModeSwitcher() {
 
 function Savebtn() {
   return (
-    <div className="savebtn">
+    <div className="savebtn" onClick={() => alert("WIP!!")}>
       <Download className="saveIcon" size={24} weight="fill" />
       Download
     </div>
