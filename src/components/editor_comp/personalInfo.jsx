@@ -1,5 +1,4 @@
 import "../../styles/editor.css";
-import React from "react";
 import { newRidgeState } from "react-ridge-state";
 
 let personal_data = {

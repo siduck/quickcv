@@ -1,7 +1,6 @@
 import "../../styles/editor.css";
 
 import { Trash } from "phosphor-react";
-import React from "react";
 import { newRidgeState } from "react-ridge-state";
 
 export const skills_data = newRidgeState([{

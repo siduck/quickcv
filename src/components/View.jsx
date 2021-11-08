@@ -1,5 +1,3 @@
-import React from "react";
-
 import PersonalInfo from "../components/view_comp/personalInfo";
 import About from "../components/view_comp/about";
 import { currentMode } from "../components/Navbar";

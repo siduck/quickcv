@@ -2,7 +2,6 @@ import "../../styles/editor.css";
 
 import { newRidgeState } from "react-ridge-state";
 import { XCircle } from "phosphor-react";
-import React from "react";
 
 export const education_data = newRidgeState([{
   University: "",

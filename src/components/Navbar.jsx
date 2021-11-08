@@ -1,4 +1,3 @@
-import React from "react";
 import { AppWindow, Download, Pencil } from "phosphor-react";
 import "../styles/navbar.css";
 import "../styles/animations.css";

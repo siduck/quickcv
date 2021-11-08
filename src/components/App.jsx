@@ -1,5 +1,3 @@
-import React from "react";
-
 import Navbar from "./Navbar";
 import Editor from "./Editor";
 import View from "./View";

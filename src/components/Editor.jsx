@@ -1,5 +1,4 @@
 import "../styles/editor.css";
-import React from "react";
 
 import Skills from "../components/editor_comp/skills";
 import PersonalInfo from "../components/editor_comp/personalInfo";
