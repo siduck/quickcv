@@ -1,4 +1,3 @@
-import React from "react";
 import { EnvelopeSimple, MapPin, Phone } from "phosphor-react";
 
 import "../../styles/viewer.css";

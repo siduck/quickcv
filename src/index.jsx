@@ -1,8 +1,8 @@
 import "./index.css";
-import ReactDOM from "react-dom";
+import { render } from "preact";
 import App from "./components/App";
 
-ReactDOM.render(
+render(
   <App />,
   document.querySelector("#root"),
 );

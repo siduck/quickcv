@@ -1,5 +1,3 @@
-import React from "react";
-
 import { personalInfo_data } from "../editor_comp/personalInfo";
 import { education_data } from "../editor_comp/education";
 import { workExperience_data } from "../editor_comp/workExperience";
