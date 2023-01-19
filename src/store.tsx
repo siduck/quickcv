@@ -17,6 +17,9 @@ export const default_data = {
   "work experience": [
     { company: "", position: "", time: "" },
   ],
+
+  skills: [""],
+  interests: [""]
 };
 
 export const [store, setStore] = createStore(default_data);
