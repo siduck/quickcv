@@ -11,11 +11,13 @@ export default defineConfig({
       white: {
         1: "#fff",
         2: "#c9d0dd",
+        3: '#bfc6d3'
       },
 
       black: {
-        1: "#111825",
-        2: "#0b121f",
+        1: "#0F172A",
+        2: "#192134",
+        3: "#232b3e"
       },
     },
   },

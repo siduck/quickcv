@@ -1,15 +1,16 @@
 body {
-  @apply bg-white text-slate-8;
-  @apply dark:bg-black-1 dark:text-grey;
+  @apply bg-slate-2 text-slate-7;
+  @apply dark:bg-slate-9 dark:text-white-2;
   @apply m-0 p-0;
 }
 
-/* body * div, */
-/* body * button, */
-/* body * p, */
-/* body * input, */
-/* body * span { */
-/* } */
+body * div,
+body * button,
+body * p,
+body * input,
+body * span {
+  @apply text-base;
+}
 
 a {
   text-decoration: none;
@@ -21,12 +22,19 @@ a {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+button,
+a {
+  @apply cursor-pointer;
+}
+
 button {
   @apply vertCentered justify-between w-full;
-  @apply whitespace-nowrap;
-  @apply hover:dark:bg-tintBlack-3 hover:dark:text-red-200;
+  @apply w-fit p-3 shadow-lg ;
   @apply hover:bg-green-200 hover:text-black;
-  @apply hover:cursor-pointer dark:text-grey text-black;
+  @apply dark:text-white-2 dark:bg-black-2;
+  @apply bg-slate-7 text-white-1;
+  @apply hover:bg-white-1 hover:text-black-1;
+  @apply hover:dark:bg-slate-7 hover:dark:text-white-1;
 }
 
 button,
@@ -41,63 +49,6 @@ h1 {
 h2 {
   @apply text-3xl font-semibold;
 }
-
-/* doc related classes! */
-
-#DocContent {
-  @apply grid gap-5 pt-2 pb-5 xl:mr-10 h-fit;
-}
-
-#DocContent h1 {
-  @apply my-0;
-}
-
-#DocContent h2 {
-  @apply font-medium text-2xl;
-}
-
-#DocContent h3 {
-  @apply font-medium text-lg;
-}
-
-#DocContent p {
-  @apply text-lg;
-}
-
-#DocContent h2,
-#DocContent h3 {
-  @apply text-gray-900 dark:text-white2 my-0;
-}
-
-#DocContent ul,
-#DocContent p {
-  @apply my-0;
-}
-
-#DocContent pre {
-  @apply bg-tintBlack-2  dark:bg-black-2 dark:bg-tintBlack;
-  @apply p-5 rounded-xl font-mono my-0 text-sm;
-  @apply shadow-2xl overflow-x-auto;
-}
-
-#DocContent code {
-  @apply bg-slate-2 dark:bg-tintBlack-2 px-2 pb-1;
-  @apply text-base rounded-lg;
-}
-
-#DocContent pre code {
-  @apply bg-tintBlack-2 dark:bg-black-2;
-  @apply text-sm;
-}
-
-#DocContent ul {
-  @apply pl-5;
-}
-
-#DocContent li {
-  @apply my-2;
-}
-
 ::-webkit-scrollbar {
   -webkit-appearance: none;
 }
