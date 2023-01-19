@@ -41,6 +41,10 @@ input {
   @apply outline-none border-none border-0;
 }
 
+input {
+  @apply p-3 bg-slate-1 rounded-md !text-sm;
+}
+
 h1 {
   @apply text-3xl md:text-5xl lg:text-6xl font-bold;
 }

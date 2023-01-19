@@ -11,13 +11,13 @@ export default defineConfig({
       white: {
         1: "#fff",
         2: "#c9d0dd",
-        3: '#bfc6d3'
+        3: "#bfc6d3",
       },
 
       black: {
         1: "#0F172A",
         2: "#192134",
-        3: "#232b3e"
+        3: "#232b3e",
       },
     },
   },
@@ -41,6 +41,7 @@ export default defineConfig({
 
   shortcuts: [
     ["vertCentered", "flex items-center gap-2", { layer: "utilites" }],
+    ["center", "mx-auto", { layer: "utilites" }],
   ],
 
   transformers: [transformerAttributifyJsx(), transformerDirectives()],
