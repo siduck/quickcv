@@ -29,12 +29,11 @@ a {
 
 button {
   @apply vertCentered justify-between w-full;
-  @apply w-fit p-3 shadow-lg ;
+  @apply w-fit p-3 shadow-lg rounded-lg;
   @apply hover:bg-green-200 hover:text-black;
   @apply dark:text-white-2 dark:bg-black-2;
   @apply bg-slate-7 text-white-1;
-  @apply hover:bg-white-1 hover:text-black-1;
-  @apply hover:dark:bg-slate-7 hover:dark:text-white-1;
+  @apply hover:bg-slate-6 hover:dark:bg-slate-7 hover:text-white-1;
 }
 
 button,
@@ -49,6 +48,8 @@ h1 {
 h2 {
   @apply text-3xl font-semibold;
 }
+
+/* scrollbar */
 ::-webkit-scrollbar {
   -webkit-appearance: none;
 }
@@ -66,5 +67,5 @@ h2 {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-white-2 dark:bg-tintBlack-2;
+  @apply bg-white-2 dark:bg-black-2;
 }
