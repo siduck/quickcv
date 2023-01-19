@@ -45,6 +45,7 @@ input {
   @apply p-3 bg-slate-1 dark:bg-black-3 rounded-md !text-sm;
   @apply dark:text-white-2;
   @apply focus:outline-blue;
+  @apply capitalize;
 }
 
 h1 {

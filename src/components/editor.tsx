@@ -1,4 +1,7 @@
 import { setStore, store } from "../store";
+import { For } from "solid-js";
+
+import "iconify-icon";
 
 const PersonalDetails = () => {
   const placeholders = [
@@ -16,7 +19,6 @@ const PersonalDetails = () => {
       <div grid grid-cols-2 gap-3>
         {placeholders.map((x: any) => (
           <input
-            capitalize
             placeholder={x.altname || x.name}
             onChange={(e) => setStore(x.name, e.target.value)}
             value={store[x.name] || ""}
@@ -29,7 +31,7 @@ const PersonalDetails = () => {
 
 const About = () => {
   const placeholders = [
-    {name: "about", altname: "About you ( short self introduction)" },
+    { name: "about", altname: "About you ( short self introduction)" },
     { name: "career Objective" },
   ];
 
@@ -39,13 +41,66 @@ const About = () => {
       <div grid gap-3>
         {placeholders.map((x: any) => (
           <input
-            capitalize
             placeholder={x.altname || x.name}
             onChange={(e) => setStore(x.name, e.target.value)}
             value={store[x.name] || ""}
           />
         ))}
       </div>
+    </div>
+  );
+};
+
+const Education_WorkExp = (props: any) => {
+  const { store_name } = props;
+
+  return (
+    <div>
+      <h3 capitalize>{store_name}</h3>
+
+      <div grid gap-3>
+        <For each={store[store_name]}>
+          {(obj, index) => (
+            <div flex gap-3 items-center>
+              {Object.entries(obj).map(([key, value]) => (
+                <input
+                  w-full
+                  placeholder={key}
+                  value={store[store_name][index()][key]}
+                  onchange={(e) =>
+                    setStore(store_name, index(), key, e.target.value)}
+                />
+              ))}
+
+              <button
+                class="!bg-slate-7 !p-1 text-3xl !rounded-full"
+                onclick={() =>
+                  setStore(
+                    store_name,
+                    store[store_name].filter((_, i) => i !== index),
+                  )}
+              >
+                <iconify-icon icon="ion:close-circle" text="red-3 dark:red-4">
+                </iconify-icon>
+              </button>
+            </div>
+          )}
+        </For>
+      </div>
+
+      <button
+        class="!bg-blue-6 mt-5 mx-auto"
+        onclick={() => {
+          let emptyObj = store_name == "education"
+            ? { institution: "", qualification: "", time: "" }
+            : { company: "", position: "", time: "" };
+
+          setStore(store_name, [...store[store_name], emptyObj]);
+        }}
+      >
+        <iconify-icon icon="ic:round-add-circle" text-xl></iconify-icon>
+        Add
+      </button>
     </div>
   );
 };
@@ -57,5 +112,7 @@ export default () => (
   >
     <PersonalDetails />
     <About />
+    <Education_WorkExp store_name="education" />
+    <Education_WorkExp store_name="work experience" />
   </div>
 );
