@@ -1,6 +1,21 @@
 import { defineConfig } from "vite";
-import preact from "@preact/preset-vite";
+
+import Unocss from "unocss/vite";
+
+import solidPlugin from "vite-plugin-solid";
 
 export default defineConfig({
-  plugins: [preact()],
+  server: {
+    port: 3000
+  },
+  preview: {
+    port: 8000
+  },
+  plugins: [
+    Unocss(),
+    solidPlugin(),
+  ],
+  build: {
+    target: "esnext",
+  },
 });
