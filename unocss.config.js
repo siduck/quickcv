@@ -27,7 +27,7 @@ export default defineConfig({
     presetWebFonts({
       provider: "google", // default provider
       fonts: {
-        sans: "Inter Tight:400,500,700",
+        sans: "Inter Tight:400,500,600,700",
         raleway: "Raleway:300,400,700",
       },
     }),

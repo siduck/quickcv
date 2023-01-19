@@ -12,7 +12,7 @@ const DownloadBtns = () => (
       SVG
     </button>
 
-     <button p-2>
+    <button p-2>
       <iconify-icon
         icon="material-symbols:download"
         class="bg-red-4 text-white-1 p-1 rounded-full"
@@ -20,7 +20,6 @@ const DownloadBtns = () => (
       </iconify-icon>
       PDF
     </button>
-
   </>
 );
 
@@ -28,19 +27,16 @@ const Navbar = () => {
   const [theme, setTheme] = createSignal(localStorage.theme || "light");
 
   return (
-    <div
-      vertCentered
-      justify-between
-      class="!text-2xl [&_iconify-icon]:text-xl [&_button]:rounded-full"
-    >
+    <div class="vertCentered justify-between [&_iconify-icon]:text-xl [&_button]:rounded-full">
       {/* Branding */}
-      <h3 text-blue-5>
+      <h3 text-blue-5 class="text-2xl">
         Quick <span text-2xl text-slate-7 dark:text-white-3>Cv</span>
       </h3>
 
       <div vertCentered>
         <button
-          bg-white-1 text-black-2
+          bg-white-1
+          text-black-2
           onclick={() => {
             const newTheme = theme() == "light" ? "dark" : "light";
             setTheme(newTheme);
@@ -56,7 +52,7 @@ const Navbar = () => {
           </Show>
         </button>
 
-        <DownloadBtns/>
+        <DownloadBtns />
       </div>
     </div>
   );
