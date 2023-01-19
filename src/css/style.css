@@ -31,7 +31,7 @@ button {
   @apply vertCentered justify-between w-full;
   @apply w-fit p-3 shadow-lg rounded-lg;
   @apply hover:bg-green-200 hover:text-black;
-  @apply dark:text-white-2 dark:bg-black-2;
+  @apply dark:text-white-2 dark:bg-black-3;
   @apply bg-slate-7 text-white-1;
   @apply hover:bg-slate-6 hover:dark:bg-slate-7 hover:text-white-1;
 }
@@ -50,6 +50,7 @@ input {
 
 h1 {
   @apply text-3xl md:text-5xl lg:text-6xl font-bold;
+  @apply capitalize;
 }
 
 h2 {
@@ -60,23 +61,31 @@ h3 {
   @apply text-xl;
 }
 
-/* scrollbar */
-::-webkit-scrollbar {
-  -webkit-appearance: none;
+/* hide window title, website name,time */
+@page {
+  size: auto;
+  margin: 0mm;
 }
 
-::-webkit-scrollbar:vertical {
-  width: 15px;
-}
+@media print {
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
 
-::-webkit-scrollbar:horizontal {
-  height: 15px;
-}
+  body * {
+    visibility: hidden;
+  }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-slate-4 dark:bg-slate-6;
-}
+  #resumeResult,
+  #resumeResult * {
+    visibility: visible;
+  }
 
-::-webkit-scrollbar-track {
-  @apply bg-white-2 dark:bg-black-2;
+  #resumeResult {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }

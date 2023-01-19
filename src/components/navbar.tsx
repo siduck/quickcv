@@ -12,7 +12,7 @@ const DownloadBtns = () => (
       SVG
     </button>
 
-    <button p-2>
+    <button p-2 onclick={()=> window.print()}>
       <iconify-icon
         icon="material-symbols:download"
         class="bg-red-4 text-white-1 p-1 rounded-full"

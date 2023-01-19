@@ -16,8 +16,9 @@ export default defineConfig({
 
       black: {
         1: "#0F172A",
-        2: "#192134",
+        2: "#161e31",
         3: "#232b3e",
+        4: '#2d3548'
       },
     },
   },
