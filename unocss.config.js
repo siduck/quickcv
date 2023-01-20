@@ -18,7 +18,7 @@ export default defineConfig({
         1: "#0F172A",
         2: "#161e31",
         3: "#232b3e",
-        4: '#2d3548'
+        4: "#2d3548",
       },
     },
   },
@@ -32,12 +32,12 @@ export default defineConfig({
         raleway: "Raleway:300,400,700",
       },
     }),
-    ,
     presetAttributify(),
   ],
 
   rules: [
     ["softShadow", { "box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px" }],
+    ["animate_smooth", {  "animation": "smoothLoad .4s"}]
   ],
 
   shortcuts: [

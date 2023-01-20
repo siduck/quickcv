@@ -76,13 +76,18 @@ const Education_WorkExp = (props: any) => {
 
               <button
                 class="!bg-slate-7 !p-1 text-3xl !rounded-full"
-                onclick={() =>
+                onclick={() => {
                   setStore(
                     store_name,
-                    store[store_name].filter((_, i) => i !== index),
-                  )}
+                    store[store_name].filter((_, i) => i !== index()),
+                  );
+                }}
               >
-                <iconify-icon icon="ion:close-circle" text="red-3 dark:red-4">
+                <iconify-icon
+                  hover="!text-red-4 dark:!text-red-5"
+                  icon="ion:close-circle"
+                  text="red-3 dark:red-4"
+                >
                 </iconify-icon>
               </button>
             </div>
@@ -143,10 +148,15 @@ const Skills_Hobbies = (props: any) => {
                 onclick={() =>
                   setStore(
                     store_name,
-                    store[store_name].filter((_, i) => i !== index),
+                    store[store_name].filter((_, i) => i !== index()),
                   )}
               >
-                <iconify-icon icon="ion:close-circle" text="slate-6 dark:red-4">
+                <iconify-icon
+                  hover="!text-red-4 dark:!text-red-5"
+                  icon="ion:close-circle"
+                  text="slate-6 dark:red-4"
+                  rounded-full
+                >
                 </iconify-icon>
               </button>
             </div>
@@ -190,10 +200,14 @@ const Oss = () => (
               onclick={() =>
                 setStore(
                   "oss",
-                  store.oss.filter((_, i) => i !== index),
+                  store.oss.filter((_, i) => i !== index()),
                 )}
             >
-              <iconify-icon icon="ion:close-circle" text="red-3 dark:red-4">
+              <iconify-icon
+                hover="!text-red-4 dark:!text-red-5"
+                icon="ion:close-circle"
+                text="red-3 dark:red-4"
+              >
               </iconify-icon>
             </button>
           </div>
@@ -222,7 +236,8 @@ export default () => (
     bg="white-1 dark:black-2"
     p="5 md:10"
     pt="0 md:5"
-    class="max-w-5xl center shadow-sm rounded-xl grid gap-5"
+    class="max-w-5xl center shadow-sm rounded-xl grid gap-5 [&_*]:animate_smooth"
+    animate_smooth
   >
     <PersonalDetails />
     <About />

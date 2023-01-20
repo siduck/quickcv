@@ -221,8 +221,10 @@ const OSS = () => (
 
 export default () => (
   <div
-    class="w-[8.27in] rounded-lg p-10 bg-white-1 dark:bg-black-2 mx-auto text-slate-6 dark:text-white-3 h-fit overflow-visible"
+    class="w-[8.27in] rounded-lg p-10 bg-white-1 dark:bg-black-2 mx-auto text-slate-6 dark:text-white-3 h-fit overflow-visible [&_*]:animate_smooth"
     id="resumeResult"
+
+    animate_smooth
   >
     {/* header */}
     <div border-solid border="1 slate-2 dark:slate-7" mb-10></div>
