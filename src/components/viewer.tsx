@@ -20,10 +20,10 @@ const CareerObjective = () => (
         class="bg-red-1 rounded-full dark:text-red-3 p-[0.3rem]"
       >
       </iconify-icon>
-      Career Objective :
+      Profile :
     </div>
 
-    <div>{store["career objective"]}</div>
+    <div>{store.profile}</div>
   </div>
 );
 
@@ -186,15 +186,23 @@ const OSS = () => (
     </div>
 
     {store.oss.map((x) => (
-      <div grid bg-ed >
-        <div flex justify-between capitalize border='solid 0 b-2 slate-6 dark:black-4'>
-
-        <div font-semibold bg='slate-6 dark:black-4' text='white-1 dark:white-3' p-1 px-5 rounded-t-lg >
-          {x["project name"]} 
+      <div grid bg-ed>
+        <div
+          class="flex justify-between capitalize"
+          border="solid 0 b-2 slate-6 dark:black-4"
+        >
+          <div
+            bg="slate-6 dark:black-4"
+            text="white-1 dark:white-3"
+            class="font-semibold p-1 px-5 rounded-t-lg"
+          >
+            {x["project name"]}
+          </div>
+          ( {x.languages} )
         </div>
-          ( {x.languages}   )
-        </div>
-        <li p-5  border='solid t-1 slate-6 dark:black-4' rounded-b-lg >{x.description}</li>
+        <li p-5 border="solid t-1 slate-6 dark:black-4" rounded-b-lg>
+          {x.description}
+        </li>
       </div>
     ))}
   </div>
@@ -213,7 +221,7 @@ export default () => (
       class="capitalize text-center font-normal text-xl font-raleway"
       border="slate-2 dark:slate-7"
     >
-      {store.about}
+      {store.designation}
     </h2>
     <div border-solid border="1 slate-2 dark:slate-7" mt-10></div>
 

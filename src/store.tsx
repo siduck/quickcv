@@ -8,8 +8,7 @@ export const get_default_data = () => {
     address: "",
     "email address": "",
     "github username": "",
-    "career objective": "",
-    about: "",
+    profile: "",
 
     education: [
       { institution: "", qualification: "", time: "" },
@@ -33,9 +32,8 @@ export const get_demo_data = () => {
     address: "H-No: 1-18/389/49 Brahmanwadi, Begumpet, Hyderabad-500016",
     "email address": "siduck@tutanota.com",
     "github username": "siduck",
-    "career objective":
+    profile:
       "To obtain a reliable and challenging frontend web developer's position at a reputed firm & building beautiful UI/UX interfaces whilst improving my skills",
-    about: "frontend web developer",
 
     education: [
       {

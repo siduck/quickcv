@@ -31,8 +31,10 @@ const PersonalDetails = () => {
 
 const About = () => {
   const placeholders = [
-    { name: "about", altname: "About you ( short self introduction)" },
-    { name: "career Objective" },
+    {
+      name: "profile",
+      altname: "profile (write short self introduction & goals)",
+    },
   ];
 
   return (
@@ -205,7 +207,7 @@ const Oss = () => (
         setStore("oss", [...store.oss, {
           "project name": "",
           description: "",
-          languages: ""
+          languages: "",
         }]);
       }}
     >
