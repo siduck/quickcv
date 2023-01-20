@@ -21,6 +21,7 @@ export const get_default_data = () => {
 
     skills: [""],
     interests: [""],
+    oss: [{ "project name": "", description: "", languages: "" }],
   };
 };
 
@@ -74,6 +75,15 @@ export const get_demo_data = () => {
       "lua scripting file-icons:lua",
       "Ricing linux bi:palette2",
       "shell scripting file-icons:terminal",
+    ],
+
+    oss: [
+      {
+        "project name": "nvchad",
+        description:
+          "An attempt to make neovim cli functional like an IDE while being very beautiful, blazing fast startuptime",
+        languages: "lua "
+      },
     ],
   };
 };

@@ -115,7 +115,14 @@ const Skills_Hobbies = (props: any) => {
       <div flex flex-wrap gap-3>
         <For each={store[store_name]}>
           {(val, index) => (
-            <div bg="slate-1 dark:black-3" grid grid-cols="[1fr_auto]" items-center focus-within:border-2  focus-within:border-solid focus-within:border-blue rounded-lg > 
+            <div
+              bg="slate-1 dark:black-3"
+              grid
+              grid-cols="[1fr_auto]"
+              items-center
+              focus-within="border-2 border-solid border-blue"
+              rounded-lg
+            >
               <input
                 rounded-r-none
                 w-full
@@ -158,6 +165,56 @@ const Skills_Hobbies = (props: any) => {
   );
 };
 
+const Oss = () => (
+  <div>
+    <h3 capitalize>Open source projects</h3>
+
+    {/* input fields */}
+    <div grid gap-3>
+      <For each={store.oss}>
+        {(obj, index) => (
+          <div flex flex-col md:flex-row gap-3 items-center>
+            {Object.entries(obj).map(([key, value]) => (
+              <input
+                w-full
+                placeholder={key}
+                value={value}
+                onchange={(e) => setStore("oss", index(), key, e.target.value)}
+              />
+            ))}
+
+            <button
+              class="!bg-slate-7 !p-1 text-3xl !rounded-full"
+              onclick={() =>
+                setStore(
+                  "oss",
+                  store.oss.filter((_, i) => i !== index),
+                )}
+            >
+              <iconify-icon icon="ion:close-circle" text="red-3 dark:red-4">
+              </iconify-icon>
+            </button>
+          </div>
+        )}
+      </For>
+    </div>
+
+    <button
+      class="!bg-blue-6 mt-5 mx-auto"
+      onclick={() => {
+        setStore("oss", [...store.oss, {
+          "project name": "",
+          description: "",
+          languages: ""
+        }]);
+      }}
+    >
+      <iconify-icon icon="ic:round-add-circle" text-xl></iconify-icon>
+      Add
+    </button>
+  </div>
+);
+
 export default () => (
   <div
     bg="white-1 dark:black-2"
@@ -169,5 +226,6 @@ export default () => (
     <Education_WorkExp store_name="work experience" />
     <Skills_Hobbies store_name="skills" />
     <Skills_Hobbies store_name="interests" />
+    <Oss />
   </div>
 );

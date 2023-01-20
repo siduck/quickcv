@@ -172,6 +172,34 @@ const Skills_Interests = (
   </div>
 );
 
+const OSS = () => (
+  <div grid gap-7>
+    {/*heading */}
+    <div font-bold text-2xl vertCentered>
+      <iconify-icon
+        icon="tabler:brand-open-source"
+        width="25"
+        class="bg-lime-2 rounded-full dark:text-lime-3 p-[0.3rem]"
+      >
+      </iconify-icon>
+      Open Source Projects :
+    </div>
+
+    {store.oss.map((x) => (
+      <div grid bg-ed >
+        <div flex justify-between capitalize border='solid 0 b-2 slate-6 dark:black-4'>
+
+        <div font-semibold bg='slate-6 dark:black-4' text='white-1 dark:white-3' p-1 px-5 rounded-t-lg >
+          {x["project name"]} 
+        </div>
+          ( {x.languages}   )
+        </div>
+        <li p-5  border='solid t-1 slate-6 dark:black-4' rounded-b-lg >{x.description}</li>
+      </div>
+    ))}
+  </div>
+);
+
 export default () => (
   <div
     class="w-[8.27in] rounded-lg p-10 bg-white-1 dark:bg-black-2 mx-auto text-slate-6 dark:text-white-3 h-fit overflow-visible"
@@ -209,6 +237,8 @@ export default () => (
           iconColor="bg-slate-6 text-white-1 dark:text-blue-3"
         />
       </div>
+
+      <OSS />
     </div>
   </div>
 );
