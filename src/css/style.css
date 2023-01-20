@@ -1,0 +1,105 @@
+body {
+  @apply bg-slate-2 text-slate-7;
+  @apply dark:bg-slate-9 dark:text-white-3;
+  @apply m-0 p-0;
+}
+
+body * div,
+body * button,
+body * p,
+body * input,
+body * span {
+  @apply text-base;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @apply hover:text-blue-3;
+}
+
+.softshadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button,
+a {
+  @apply cursor-pointer;
+}
+
+button {
+  @apply vertCentered justify-between w-full;
+  @apply w-fit p-3 shadow-lg rounded-lg;
+  @apply hover:bg-green-200 hover:text-black;
+  @apply dark:text-white-2 dark:bg-black-3;
+  @apply bg-slate-7 text-white-1;
+  @apply hover:bg-slate-6 hover:dark:bg-slate-7 hover:text-white-1;
+}
+
+button,
+input {
+  @apply outline-none border-none border-0;
+}
+
+input {
+  @apply p-3 bg-slate-1 dark:bg-black-3 rounded-md !text-sm;
+  @apply dark:text-white-2;
+  @apply focus:outline-blue;
+  @apply capitalize;
+}
+
+h1 {
+  @apply text-3xl md:text-5xl lg:text-6xl font-bold;
+  @apply capitalize;
+}
+
+h2 {
+  @apply text-3xl font-semibold;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+/* hide window title, website name,time */
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    height: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #resumeResult,
+  #resumeResult * {
+    visibility: visible;
+  }
+
+  #resumeResult {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+/* animations */
+
+@keyframes smoothLoad {
+  from {
+    opacity: 0;
+    transform: rotateX(17deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
