@@ -28,9 +28,12 @@ const Navbar = () => {
   const [theme, setTheme] = createSignal(localStorage.theme || "light");
 
   return (
-    <div class="vertCentered justify-between [&_iconify-icon]:text-xl [&_button]:rounded-full">
+    <div
+      class="vertCentered justify-between [&_iconify-icon]:text-xl [&_button]:rounded-full"
+      p="y-2 b-5 md:y-5"
+    >
       {/* Branding */}
-      <h3 text-blue-5 class="text-2xl">
+      <h3 text-blue-5 class="text-2xl my-0">
         Quick <span text-2xl text-slate-7 dark:text-white-3>Cv</span>
       </h3>
 

@@ -114,7 +114,7 @@ const Skills_Hobbies = (props: any) => {
     <div>
       <h3 capitalize>{store_name}</h3>
 
-      <div flex flex-wrap gap-3>
+      <div grid md:flex flex-wrap gap-3>
         <For each={store[store_name]}>
           {(val, index) => (
             <div
@@ -220,7 +220,9 @@ const Oss = () => (
 export default () => (
   <div
     bg="white-1 dark:black-2"
-    class="h-full m-10 p-10 pt-5 max-w-5xl center shadow-sm rounded-xl grid gap-5"
+    p="5 md:10"
+    pt="0 md:5"
+    class="max-w-5xl center shadow-sm rounded-xl grid gap-5"
   >
     <PersonalDetails />
     <About />
