@@ -16,7 +16,7 @@ const PersonalDetails = () => {
   return (
     <div>
       <h3>Personal Details</h3>
-      <div grid grid-cols-2 gap-3>
+      <div grid md:grid-cols-2 gap-3>
         {placeholders.map((x: any) => (
           <input
             placeholder={x.altname || x.name}
@@ -61,7 +61,7 @@ const Education_WorkExp = (props: any) => {
       <div grid gap-3>
         <For each={store[store_name]}>
           {(obj, index) => (
-            <div flex gap-3 items-center>
+            <div flex flex-col md:flex-row gap-3 items-center>
               {Object.entries(obj).map(([key, value]) => (
                 <input
                   w-full

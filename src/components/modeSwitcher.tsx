@@ -6,7 +6,7 @@ export const [editorMode, setEditorMode] = createSignal(true);
 const [demoShown, setDemo] = createSignal(false);
 
 export default () => (
-  <div mb-10 vertCentered mx-auto w-fit>
+  <div mb-10 vertCentered class='!gap-3' mx-auto w-fit>
     <div class="[&_button]:rounded-full vertCentered bg-slate-7 dark:bg-black-2 w-fit p-2 rounded-full !gap-1">
       <button
         bg={editorMode() ? "slate-6 dark:black-3" : "dark:black-2"}
