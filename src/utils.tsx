@@ -5,8 +5,6 @@ function generatePDF() {
   } // for pcs
   else {
     const element = document.getElementById("resumeResult");
-
-    // Get the element's height in pixels
     const stylesheet = document.styleSheets[0];
 
     // set @page's size = resume div's dimensions
