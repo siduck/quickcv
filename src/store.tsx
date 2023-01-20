@@ -33,7 +33,7 @@ export const get_demo_data = () => {
     "email address": "siduck@tutanota.com",
     "github username": "siduck",
     profile:
-      "To obtain a reliable and challenging frontend web developer's position at a reputed firm & building beautiful UI/UX interfaces whilst improving my skills",
+      "I'm a Frontend Web developer and an open source enthusiast . I use Gnu / Artix linux btw and I maintain several open source projects at github. I'm looking forward to get a junior frontend web developer's position at a reputed corporation / startup. I love building beautiful UI/UX interfaces with react js.",
 
     education: [
       {
@@ -79,8 +79,20 @@ export const get_demo_data = () => {
       {
         "project name": "nvchad",
         description:
-          "An attempt to make neovim cli functional like an IDE while being very beautiful, blazing fast startuptime",
-        languages: "lua "
+          "A Neovim config framework with blazing fast startuptime & beautiful UI providing solid defaults coming with many lua plugins specifically written for it. NvChad currently has more than 13,900+ stars on github, it's the most popular neovim only distro.",
+        languages: "lua ",
+      },
+      {
+        "project name": "quick Cv",
+        description:
+          "Quick resume / cv builder for making beautiful resumes & supports exporting to high quality svgs & pdfs.",
+        languages: "typescript, solidJs, unocss, vite",
+      },
+      {
+        "project name": "pomoz",
+        description:
+          "Minimal pomodoro timer & todo tracking web app to keep progress of your productiveness.",
+        languages: "javascript, solidJs, css ",
       },
     ],
   };

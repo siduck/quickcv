@@ -11,7 +11,9 @@ function generatePDF() {
 
     // set @page's size = resume div's dimensions
     stylesheet.insertRule(
-      `@page { size: ${element?.offsetWidth}px ${element?.offsetHeight}px; }`,
+      `@page { size: ${element?.offsetWidth}px ${
+        element?.offsetHeight + 1
+      }px; }`,
       stylesheet.cssRules.length,
     );
 

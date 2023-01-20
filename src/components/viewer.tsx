@@ -20,7 +20,7 @@ const CareerObjective = () => (
         class="bg-red-1 rounded-full dark:text-red-3 p-[0.3rem]"
       >
       </iconify-icon>
-      Profile :
+      About :
     </div>
 
     <div>{store.profile}</div>
@@ -186,11 +186,8 @@ const OSS = () => (
     </div>
 
     {store.oss.map((x) => (
-      <div grid bg-ed>
-        <div
-          class="flex justify-between capitalize"
-          border="solid 0 b-2 slate-6 dark:black-4"
-        >
+      <div grid>
+        <div class="flex justify-between capitalize">
           <div
             bg="slate-6 dark:black-4"
             text="white-1 dark:white-3"
@@ -200,9 +197,23 @@ const OSS = () => (
           </div>
           ( {x.languages} )
         </div>
-        <li p-5 border="solid t-1 slate-6 dark:black-4" rounded-b-lg>
+        <div
+          class="flex !m-0"
+          p-5
+          border="solid slate-6 dark:black-4"
+          rounded-b-lg
+          rounded-r-lg
+        >
+          <iconify-icon
+            mr-3
+            icon="material-symbols:line-end-arrow-rounded"
+            mt="0.1rem"
+            width="20"
+            bg="dark:!transparent"
+          >
+          </iconify-icon>
           {x.description}
-        </li>
+        </div>
       </div>
     ))}
   </div>
