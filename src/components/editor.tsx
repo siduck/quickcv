@@ -115,10 +115,11 @@ const Skills_Hobbies = (props: any) => {
       <div flex flex-wrap gap-3>
         <For each={store[store_name]}>
           {(val, index) => (
-            <div flex items-center>
+            <div bg="slate-1 dark:black-3" grid grid-cols="[1fr_auto]" items-center focus-within:border-2  focus-within:border-solid focus-within:border-blue rounded-lg > 
               <input
                 rounded-r-none
                 w-full
+                focus:outline-none
                 placeholder={store_name == "skills"
                   ? "skill"
                   : "interest / hobby"}
@@ -129,14 +130,14 @@ const Skills_Hobbies = (props: any) => {
               />
 
               <button
-                class="!bg-slate-7 p-2 text-3xl rounded-l-none"
+                class="shadow-none !bg-slate-1 dark:!bg-black-3 p-2 text-3xl rounded-l-none"
                 onclick={() =>
                   setStore(
                     store_name,
                     store[store_name].filter((_, i) => i !== index),
                   )}
               >
-                <iconify-icon icon="ion:close-circle" text="red-3 dark:red-4">
+                <iconify-icon icon="ion:close-circle" text="slate-6 dark:red-4">
                 </iconify-icon>
               </button>
             </div>
