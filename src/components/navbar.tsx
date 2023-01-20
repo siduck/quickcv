@@ -33,12 +33,13 @@ const Navbar = () => {
       p="y-2 b-5 md:y-5"
     >
       {/* Branding */}
-      <h3 text-blue-5 class="text-2xl my-0">
+      <h3 text-blue-6 class="text-2xl my-0">
         Quick <span text-2xl text-slate-7 dark:text-white-3>Cv</span>
       </h3>
 
       <div vertCentered>
         <button
+          aria-label="theme toggler"
           bg-white-1
           text-black-2
           onclick={() => {

@@ -11,7 +11,7 @@ export default () => (
       <button
         bg={editorMode() ? "slate-6 dark:black-3" : "dark:black-2"}
         shadow={editorMode() ? "lg" : "none"}
-        text={editorMode() ? "!white-1 dark:!white-2" : "!slate-4"}
+        text={editorMode() ? "!white-1 dark:!white-2" : ""}
         onclick={() =>
           setEditorMode(true)}
         p=".6rem"
@@ -25,7 +25,7 @@ export default () => (
         shadow={!editorMode() ? "lg" : "none"}
         onclick={() =>
           setEditorMode(false)}
-        text={!editorMode() ? "!white-1 dark:!white-2" : "!slate-4"}
+        text={!editorMode() ? "!white-1 dark:!white-2" : ""}
         p=".6rem"
       >
         <iconify-icon icon="ic:round-grid-view"></iconify-icon>

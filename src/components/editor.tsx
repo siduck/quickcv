@@ -75,6 +75,7 @@ const Education_WorkExp = (props: any) => {
               ))}
 
               <button
+                aria-label="delete input"
                 class="!bg-slate-7 !p-1 text-3xl !rounded-full"
                 onclick={() => {
                   setStore(
@@ -96,7 +97,7 @@ const Education_WorkExp = (props: any) => {
       </div>
 
       <button
-        class="!bg-blue-6 mt-5 mx-auto"
+        class="!bg-blue-6 mt-5 mx-auto !text-white-1"
         onclick={() => {
           let emptyObj = store_name == "education"
             ? { institution: "", qualification: "", time: "" }
@@ -144,6 +145,7 @@ const Skills_Hobbies = (props: any) => {
               />
 
               <button
+                aria-label="delete input"
                 class="shadow-none !bg-slate-1 dark:!bg-black-3 p-2 text-3xl rounded-l-none"
                 onclick={() =>
                   setStore(
@@ -164,7 +166,7 @@ const Skills_Hobbies = (props: any) => {
         </For>
 
         <button
-          class="!bg-blue-6"
+          class="!bg-blue-6 !text-white-1"
           onclick={() => {
             setStore(store_name, [...store[store_name], ""]);
           }}
@@ -196,6 +198,7 @@ const Oss = () => (
             ))}
 
             <button
+              aria-label="delete input"
               class="!bg-slate-7 !p-1 text-3xl !rounded-full"
               onclick={() =>
                 setStore(
@@ -216,7 +219,7 @@ const Oss = () => (
     </div>
 
     <button
-      class="!bg-blue-6 mt-5 mx-auto"
+      class="!bg-blue-6 mt-5 mx-auto !text-white-1"
       onclick={() => {
         setStore("oss", [...store.oss, {
           "project name": "",
