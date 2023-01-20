@@ -9,7 +9,10 @@ function App() {
       <Navbar />
       <ModesBtn />
 
-      {editorMode() ? <Editor /> : <Viewer />}
+      {/* use this for html-to-image (svg) */}
+      <div id="svgWrapper" rounded-none>
+        {editorMode() ? <Editor /> : <Viewer />}
+      </div>
     </div>
   );
 }

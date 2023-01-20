@@ -1,3 +1,5 @@
+import * as htmlToImage from "html-to-image";
+
 function generatePDF() {
   // mobiles
   if ("ontouchstart" in document.documentElement) {
@@ -17,4 +19,19 @@ function generatePDF() {
   }
 }
 
-export { generatePDF };
+function generateSVG() {
+  const node = document.getElementById("svgWrapper");
+
+  htmlToImage.toSvg(node)
+    .then((dataUrl) => {
+      let link = document.createElement("a");
+      link.download = "resume.svg";
+      link.href = dataUrl;
+      link.click();
+    })
+    .catch(function (error) {
+      console.error("oops, something went wrong!", error);
+    });
+}
+
+export { generatePDF, generateSVG };

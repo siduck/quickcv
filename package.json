@@ -3,6 +3,7 @@
   "version": "0.4.1",
   "type": "module",
   "dependencies": {
+    "html-to-image": "^1.11.4",
     "iconify-icon": "^1.0.2",
     "solid-js": "^1.6.7"
   },
