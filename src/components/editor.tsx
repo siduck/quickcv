@@ -66,7 +66,7 @@ const Education_WorkExp = (props: any) => {
                 <input
                   w-full
                   placeholder={key}
-                  value={store[store_name][index()][key]}
+                  value={value}
                   onchange={(e) =>
                     setStore(store_name, index(), key, e.target.value)}
                 />
@@ -123,6 +123,7 @@ const Skills_Hobbies = (props: any) => {
                   ? "skill"
                   : "interest / hobby"}
                 value={val}
+                size={val.length}
                 onchange={(e) =>
                   setStore(store_name, index(), key, e.target.value)}
               />

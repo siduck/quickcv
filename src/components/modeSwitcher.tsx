@@ -31,6 +31,7 @@ export default () => (
 
     <button
       p-4
+      rounded-full
       onclick={() => {
         setDemo(!demoShown());
         setEditorMode(!demoShown());
