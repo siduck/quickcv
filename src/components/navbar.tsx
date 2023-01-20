@@ -1,5 +1,6 @@
 import "iconify-icon";
 import { createSignal, Show } from "solid-js";
+import { generatePDF } from "../utils";
 
 const DownloadBtns = () => (
   <>
@@ -12,7 +13,7 @@ const DownloadBtns = () => (
       SVG
     </button>
 
-    <button p-2 onclick={()=> window.print()}>
+    <button p-2 onclick={()=> generatePDF()}>
       <iconify-icon
         icon="material-symbols:download"
         class="bg-red-4 text-white-1 p-1 rounded-full"

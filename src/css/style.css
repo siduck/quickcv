@@ -62,16 +62,15 @@ h3 {
 }
 
 /* hide window title, website name,time */
-@page {
-  size: auto;
-  margin: 0mm;
-}
-
 @media print {
+  @page {
+    margin: 0;
+  }
+
   body {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
-    color-adjust: exact;
+    height: 0;
   }
 
   body * {
@@ -87,5 +86,7 @@ h3 {
     position: absolute;
     left: 0;
     top: 0;
+    box-shadow: none;
+    border-radius: 0;
   }
 }

@@ -173,7 +173,10 @@ const Skills_Interests = (
 );
 
 export default () => (
-  <div class="w-[11in] rounded-lg mt-10 p-10 bg-white-1 dark:bg-black-2 mx-auto text-slate-6 dark:text-white-3" id="resumeResult">
+  <div
+    class="w-[8.27in] rounded-lg p-10 bg-white-1 dark:bg-black-2 mx-auto text-slate-6 dark:text-white-3 h-fit overflow-visible"
+    id="resumeResult"
+  >
     {/* header */}
     <div border-solid border="1 slate-2 dark:slate-7" mb-10></div>
     <Name />
@@ -186,7 +189,7 @@ export default () => (
     </h2>
     <div border-solid border="1 slate-2 dark:slate-7" mt-10></div>
 
-    <div class="grid gap-10 mt-10 [&_iconify-icon]:dark:bg-black-3 [&_*]:text-lg">
+    <div class="grid gap-10 mt-10 [&_iconify-icon]:dark:bg-black-3">
       <CareerObjective />
       <Education />
       <WorkExp />

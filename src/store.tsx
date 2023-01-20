@@ -71,7 +71,7 @@ const demo_data = {
     "tweaking neovim skill-icons:neovim-dark",
     "Gnu / artix linux simple-icons:artixlinux",
     "lua scripting file-icons:lua",
-    "Ricing linux distros bi:palette2",
+    "Ricing linux bi:palette2",
     "shell scripting file-icons:terminal"
   ],
 };
