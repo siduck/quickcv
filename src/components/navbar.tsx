@@ -33,7 +33,8 @@ const Navbar = () => {
       p="y-2 b-5 md:y-5"
     >
       {/* Branding */}
-      <h3 text-blue-6 class="text-2xl my-0">
+      <h3 vertCentered text='blue-6 dark:blue-5' class="text-2xl my-0">
+        <img w-6 src="/logo.svg"/>
         Quick <span text-2xl text-slate-7 dark:text-white-3>Cv</span>
       </h3>
 
