@@ -100,13 +100,16 @@ const PersonalDetails = () => (
 
     {/* icons with text */}
     <div pl-10 grid gap-3 class="[&_iconify-icon]:dark:bg-transparent">
-      <div vertCentered>
-        <span font-semibold vertCentered>
-          <iconify-icon icon="mingcute:location-line" width="20">
-          </iconify-icon>Address :
-        </span>
-        {store.address}
-      </div>
+      {store.address &&
+        (
+          <div vertCentered>
+            <span font-semibold vertCentered>
+              <iconify-icon icon="mingcute:location-line" width="20">
+              </iconify-icon>Address :
+            </span>
+            {store.address}
+          </div>
+        )}
 
       <div vertCentered>
         <span font-semibold vertCentered>
@@ -223,7 +226,6 @@ export default () => (
   <div
     class="w-[8.27in] rounded-lg p-10 bg-white-1 dark:bg-black-2 mx-auto text-slate-6 dark:text-white-3 h-fit overflow-visible [&_*]:animate_smooth"
     id="resumeResult"
-
     animate_smooth
   >
     {/* header */}
