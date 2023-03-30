@@ -1,27 +1,54 @@
 import "iconify-icon";
 import { createSignal, Show } from "solid-js";
-import { generatePDF, generateSVG } from "../utils";
+import { generatePDF, generatePNG, generateSVG } from "../utils";
+
+export const [formatsShown, showFormat] = createSignal(false);
+export const [selectedFormat, setFormat] = createSignal("PNG");
+export const [loaderIconSet, setLoaderIcon] = createSignal(false);
 
 const DownloadBtns = () => (
-  <>
-    <button p-2 onclick={() => generateSVG()}>
+  <div>
+    <button p-2 onclick={() => showFormat(!formatsShown())}>
       <iconify-icon
         icon="material-symbols:download"
         class="bg-blue-5 text-white-1 p-1 rounded-full"
       >
       </iconify-icon>
-      SVG
+
+      {selectedFormat()}
+
+      {loaderIconSet()
+        ? (
+          <iconify-icon icon="mingcute:loading-3-fill" class="animate-spin">
+          </iconify-icon>
+        )
+        : (
+          <iconify-icon
+            icon={formatsShown()
+              ? "majesticons:close"
+              : "ic:round-keyboard-arrow-down"}
+          >
+          </iconify-icon>
+        )}
     </button>
 
-    <button p-2 onclick={() => generatePDF()}>
-      <iconify-icon
-        icon="material-symbols:download"
-        class="bg-red-4 text-white-1 p-1 rounded-full"
-      >
-      </iconify-icon>
-      PDF
-    </button>
-  </>
+    {formatsShown() &&
+      (
+        <div class="relative animate-smooth">
+          <div
+            bg="white-1 dark:black-3 [&_*]:transparent [&_*]:dark:transparent "
+            text="[&_*]:black-1 dark:white-2"
+            class="absolute right-1 mt-2 top-1"
+            p="[&_*]:y-2.5 [&_*]:x-5"
+            rounded="lg [&_*]:!none [&_*]:hover:!lg"
+          >
+            <button onclick={() => generatePNG()}>PNG</button>
+            <button onclick={() => generateSVG()}>SVG</button>
+            <button onclick={() => generatePDF()}>PDF</button>
+          </div>
+        </div>
+      )}
+  </div>
 );
 
 const Navbar = () => {
@@ -33,8 +60,8 @@ const Navbar = () => {
       p="y-2 b-5 md:y-5 md:t-2"
     >
       {/* Branding */}
-      <h3 vertCentered text='blue-6 dark:blue-5' class="text-2xl my-0">
-        <img w-6 src="/logo.svg"/>
+      <h3 vertCentered text="blue-6 dark:blue-5" class="text-2xl my-0">
+        <img w-6 src="/logo.svg" />
         Quick <span text-2xl text-slate-7 dark:text-white-3>Cv</span>
       </h3>
 

@@ -37,7 +37,7 @@ export const get_demo_data = () => {
     education: [
       {
         institution: "Sarada College of Hotel Management",
-        qualification: "bhmct degree ( discontinued )",
+        qualification: "bhmct degree (discontinued)",
         time: "2019-2022",
       },
       {

@@ -28,7 +28,7 @@ a {
 }
 
 button {
-  @apply vertCentered justify-between w-full;
+  @apply vertCentered justify-between;
   @apply w-fit p-3 shadow-lg rounded-lg;
   @apply hover:bg-green-200 hover:text-black;
   @apply dark:text-white-2 dark:bg-black-3;

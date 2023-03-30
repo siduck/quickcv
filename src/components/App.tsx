@@ -10,7 +10,7 @@ function App() {
       <ModesBtn />
 
       {/* use this for html-to-image (svg) */}
-      <div id="svgWrapper" rounded-none>
+      <div id="svgWrapper" rounded-none md:grid justify-center>
         {editorMode() ? <Editor /> : <Viewer />}
       </div>
     </div>

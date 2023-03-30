@@ -224,7 +224,7 @@ const OSS = () => (
 
 export default () => (
   <div
-    class="w-[8.27in] rounded-lg p-10 bg-white-1 dark:bg-black-2 mx-auto text-slate-6 dark:text-white-3 h-fit overflow-visible [&_*]:animate_smooth"
+    class="w-[8.27in] rounded-lg p-10 bg-white-1 dark:bg-black-2 text-slate-6 dark:text-white-3 h-fit overflow-visible [&_*]:animate_smooth"
     id="resumeResult"
     animate_smooth
   >
