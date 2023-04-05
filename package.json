@@ -4,10 +4,10 @@
   "type": "module",
   "dependencies": {
     "html-to-image": "^1.11.4",
-    "iconify-icon": "^1.0.2",
     "solid-js": "^1.6.7"
   },
   "devDependencies": {
+    "@iconify-icon/solid": "^1.0.7",
     "@unocss/preset-web-fonts": "^0.48.4",
     "@unocss/transformer-attributify-jsx": "^0.48.0",
     "@unocss/transformer-directives": "^0.48.0",

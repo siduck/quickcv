@@ -1,4 +1,4 @@
-import "iconify-icon";
+import { Icon } from "@iconify-icon/solid";
 import { createSignal } from "solid-js";
 import { get_default_data, get_demo_data, setStore } from "../store";
 
@@ -16,7 +16,7 @@ export default () => (
           setEditorMode(true)}
         p=".6rem"
       >
-        <iconify-icon icon="ph:pencil-simple-fill"></iconify-icon>
+        <Icon icon="ph:pencil-simple-fill" />
         Editor
       </button>
 
@@ -28,7 +28,7 @@ export default () => (
         text={!editorMode() ? "!white-1 dark:!white-2" : ""}
         p=".6rem"
       >
-        <iconify-icon icon="ic:round-grid-view"></iconify-icon>
+        <Icon icon="ic:round-grid-view" />
         Viewer
       </button>
     </div>
@@ -42,13 +42,9 @@ export default () => (
         setStore(demoShown() ? get_demo_data() : get_default_data());
       }}
     >
-      <iconify-icon
-        width="20"
-        icon={`material-symbols:${
-          demoShown() ? "check-circle-rounded" : "circle-outline"
-        }`}
-      >
-      </iconify-icon>
+      {!demoShown()
+        ? <Icon width="20" icon="ph-circle-bold" />
+        : <Icon width="20" icon="ph:check-circle-fill" />}
       Demo
     </button>
   </div>

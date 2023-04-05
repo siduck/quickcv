@@ -1,6 +1,7 @@
-import "iconify-icon";
 import { createSignal, Show } from "solid-js";
 import { generatePDF, generatePNG, generateSVG } from "../utils";
+
+import { Icon } from "@iconify-icon/solid";
 
 export const [formatsShown, showFormat] = createSignal(false);
 export const [selectedFormat, setFormat] = createSignal("PNG");
@@ -9,26 +10,21 @@ export const [loaderIconSet, setLoaderIcon] = createSignal(false);
 const DownloadBtns = () => (
   <div>
     <button p-2 onclick={() => showFormat(!formatsShown())}>
-      <iconify-icon
+      <Icon
         icon="material-symbols:download"
         class="bg-blue-5 text-white-1 p-1 rounded-full"
-      >
-      </iconify-icon>
+      />
 
       {selectedFormat()}
 
       {loaderIconSet()
-        ? (
-          <iconify-icon icon="mingcute:loading-3-fill" class="animate-spin">
-          </iconify-icon>
-        )
+        ? <Icon icon="mingcute:loading-3-fill" class="animate-spin" />
         : (
-          <iconify-icon
+          <Icon
             icon={formatsShown()
               ? "majesticons:close"
               : "ic:round-keyboard-arrow-down"}
-          >
-          </iconify-icon>
+          />
         )}
     </button>
 
@@ -79,9 +75,9 @@ const Navbar = () => {
         >
           <Show
             when={theme() == "light"}
-            fallback={<iconify-icon icon="ph:moon-stars-bold"></iconify-icon>}
+            fallback={<Icon icon="ph:moon-stars-bold" />}
           >
-            <iconify-icon icon="ph:sun-bold"></iconify-icon>
+            <Icon icon="ph:sun-bold" />
           </Show>
         </button>
 

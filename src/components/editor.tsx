@@ -1,7 +1,7 @@
 import { setStore, store } from "../store";
 import { For } from "solid-js";
 
-import "iconify-icon";
+import { Icon } from "@iconify-icon/solid";
 
 const PersonalDetails = () => {
   const placeholders = [
@@ -84,12 +84,10 @@ const Education_WorkExp = (props: any) => {
                   );
                 }}
               >
-                <iconify-icon
-                  hover="!text-red-4 dark:!text-red-5"
+                <Icon
                   icon="ion:close-circle"
-                  text="red-3 dark:red-4"
-                >
-                </iconify-icon>
+                  class="text-red-3 dark:text-red-4 hover:text-red-2"
+                />
               </button>
             </div>
           )}
@@ -106,7 +104,7 @@ const Education_WorkExp = (props: any) => {
           setStore(store_name, [...store[store_name], emptyObj]);
         }}
       >
-        <iconify-icon icon="ic:round-add-circle" text-xl></iconify-icon>
+        <Icon icon="ic:round-add-circle" text-xl />
         Add
       </button>
     </div>
@@ -153,13 +151,10 @@ const Skills_Hobbies = (props: any) => {
                     store[store_name].filter((_, i) => i !== index()),
                   )}
               >
-                <iconify-icon
-                  hover="!text-red-4 dark:!text-red-5"
+                <Icon
                   icon="ion:close-circle"
-                  text="slate-6 dark:red-4"
-                  rounded-full
-                >
-                </iconify-icon>
+                  class="text-red-4 dark:text-red-4 hover:text-red-2"
+                />
               </button>
             </div>
           )}
@@ -171,7 +166,7 @@ const Skills_Hobbies = (props: any) => {
             setStore(store_name, [...store[store_name], ""]);
           }}
         >
-          <iconify-icon icon="ic:round-add-circle" text-xl></iconify-icon>
+          <Icon icon="ic:round-add-circle" text-xl />
           Add
         </button>
       </div>
@@ -206,12 +201,10 @@ const Oss = () => (
                   store.oss.filter((_, i) => i !== index()),
                 )}
             >
-              <iconify-icon
-                hover="!text-red-4 dark:!text-red-5"
+              <Icon
                 icon="ion:close-circle"
-                text="red-3 dark:red-4"
-              >
-              </iconify-icon>
+                class="text-red-3 dark:text-red-4 hover:text-red-2"
+              />
             </button>
           </div>
         )}
@@ -228,7 +221,7 @@ const Oss = () => (
         }]);
       }}
     >
-      <iconify-icon icon="ic:round-add-circle" text-xl></iconify-icon>
+      <Icon icon="ic:round-add-circle" text-xl />
       Add
     </button>
   </div>

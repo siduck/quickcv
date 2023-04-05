@@ -1,5 +1,5 @@
 import { store } from "../store";
-import "iconify-icon";
+import { Icon } from "@iconify-icon/solid";
 
 const Name = () => (
   <div flex gap-3 class="[&_h1]:text-5xl justify-center" font-raleway>
@@ -14,12 +14,11 @@ const CareerObjective = () => (
   <div grid gap-7>
     {/*heading */}
     <div font-bold text-2xl vertCentered>
-      <iconify-icon
+      <Icon
         icon="mdi:target-arrow"
         width="25"
-        class="bg-red-1 rounded-full dark:text-red-3 p-[0.3rem]"
-      >
-      </iconify-icon>
+        class="bg-red-1 rounded-full dark:bg-black-3 dark:text-red-3 p-[0.3rem]"
+      />
       About :
     </div>
 
@@ -31,12 +30,11 @@ const Education = () => (
   <div grid gap-7>
     {/*heading */}
     <div font-bold text-2xl vertCentered>
-      <iconify-icon
+      <Icon
         icon="mdi:education-outline"
         width="25"
-        class="bg-sky-1 rounded-full dark:text-blue-3 p-[0.3rem]"
-      >
-      </iconify-icon>
+        class="bg-sky-1 rounded-full dark:bg-black-3 dark:bg-black-3 dark:text-blue-3 p-[0.3rem]"
+      />
       Education :
     </div>
 
@@ -60,12 +58,11 @@ const WorkExp = () => (
   <div grid gap-7>
     {/*heading */}
     <div font-bold text-2xl vertCentered>
-      <iconify-icon
+      <Icon
         icon="uil:suitcase"
         width="25"
-        class="bg-purple-1 rounded-full dark:text-purple-3 p-[0.3rem]"
-      >
-      </iconify-icon>
+        class="bg-purple-1 rounded-full dark:bg-black-3 dark:text-purple-3 p-[0.3rem]"
+      />
       Work Experience :
     </div>
 
@@ -89,23 +86,22 @@ const PersonalDetails = () => (
   <div grid gap-7>
     {/*heading */}
     <div font-bold text-2xl vertCentered>
-      <iconify-icon
+      <Icon
         icon="mdi:user-circle"
         width="25"
-        class="bg-indigo-1 rounded-full dark:text-indigo-3 p-[0.3rem]"
-      >
-      </iconify-icon>
+        class="bg-indigo-1 rounded-full dark:bg-black-3 dark:text-indigo-3 p-[0.3rem]"
+      />
       Personal Details :
     </div>
 
     {/* icons with text */}
-    <div pl-10 grid gap-3 class="[&_iconify-icon]:dark:bg-transparent">
+    <div pl-10 grid gap-3 class="[&_Icon]:dark:bg-transparent">
       {store.address &&
         (
           <div vertCentered>
             <span font-semibold vertCentered>
-              <iconify-icon icon="mingcute:location-line" width="20">
-              </iconify-icon>Address :
+              <Icon icon="mingcute:location-line" width="20" />
+              Address :
             </span>
             {store.address}
           </div>
@@ -113,15 +109,15 @@ const PersonalDetails = () => (
 
       <div vertCentered>
         <span font-semibold vertCentered>
-          <iconify-icon icon="fluent:call-12-regular" width="20">
-          </iconify-icon>Phone :
+          <Icon icon="fluent:call-12-regular" width="20" />
+          Phone :
         </span>
         {store.phone}
       </div>
 
       <div vertCentered>
         <span font-semibold vertCentered>
-          <iconify-icon icon="mdi:email-variant" width="20"></iconify-icon>{" "}
+          <Icon icon="mdi:email-variant" width="20" />
           Email :
         </span>
         {store["email address"]}
@@ -129,7 +125,7 @@ const PersonalDetails = () => (
 
       <div vertCentered>
         <span font-semibold vertCentered>
-          <iconify-icon icon="mdi:github" width="20"></iconify-icon> Github :
+          <Icon icon="mdi:github" width="20" /> Github :
         </span>
         @{store["github username"]}
       </div>
@@ -148,12 +144,12 @@ const Skills_Interests = (
   <div grid gap-7 h-fit>
     {/*heading */}
     <div font-bold text-2xl vertCentered>
-      <iconify-icon
+      <Icon
         icon={props.icon}
         width="25"
-        class={`rounded-full p-[0.3rem] ${props.iconColor}`}
+        class={`rounded-full dark:bg-black-3 p-[0.3rem] ${props.iconColor}`}
       >
-      </iconify-icon>
+      </Icon>
       {props.header}
     </div>
 
@@ -166,7 +162,7 @@ const Skills_Interests = (
             class="capitalize vertCentered p-1 px-2 rounded-lg"
             bg="slate-1 dark:black-3"
           >
-            <iconify-icon icon={txttoArr[txttoArr.length - 1]}></iconify-icon>
+            <Icon icon={txttoArr[txttoArr.length - 1]}></Icon>
             {txt}
           </span>
         );
@@ -179,12 +175,12 @@ const OSS = () => (
   <div grid gap-7>
     {/*heading */}
     <div font-bold text-2xl vertCentered>
-      <iconify-icon
+      <Icon
         icon="tabler:brand-open-source"
         width="25"
-        class="bg-lime-2 rounded-full dark:text-lime-3 p-[0.3rem]"
+        class="bg-lime-2 rounded-full dark:bg-black-3 dark:text-lime-3 p-[0.3rem]"
       >
-      </iconify-icon>
+      </Icon>
       Open Source Projects :
     </div>
 
@@ -207,14 +203,13 @@ const OSS = () => (
           rounded-b-lg
           rounded-r-lg
         >
-          <iconify-icon
-            mr-3
+          <Icon
             icon="material-symbols:line-end-arrow-rounded"
-            mt="0.1rem"
             width="20"
             bg="dark:!transparent"
+            class='mt-[0.1rem] mr-2'
           >
-          </iconify-icon>
+          </Icon>
           {x.description}
         </div>
       </div>
@@ -240,7 +235,7 @@ export default () => (
     </h2>
     <div border-solid border="1 slate-2 dark:slate-7" mt-10></div>
 
-    <div class="grid gap-10 mt-10 [&_iconify-icon]:dark:bg-black-3">
+    <div class="grid gap-10 mt-10 [&_Icon]:dark:bg-black-3">
       <CareerObjective />
       <Education />
       <WorkExp />
