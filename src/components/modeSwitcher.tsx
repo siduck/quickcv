@@ -42,9 +42,11 @@ export default () => (
         setStore(demoShown() ? get_demo_data() : get_default_data());
       }}
     >
-      {!demoShown()
-        ? <Icon width="20" icon="ph-circle-bold" />
-        : <Icon width="20" icon="ph:check-circle-fill" />}
+      <div text-xl w-5 flex>
+        {!demoShown()
+          ? <Icon icon="ph-circle-bold" />
+          : <Icon icon="ph:check-circle-fill" />}
+      </div>
       Demo
     </button>
   </div>
