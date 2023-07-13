@@ -139,7 +139,7 @@ const Skills_Hobbies = (props: any) => {
                 value={val}
                 size={val.length}
                 onchange={(e) =>
-                  setStore(store_name, index(), key, e.target.value)}
+                  setStore(store_name, index(), e.target.value)}
               />
 
               <button
