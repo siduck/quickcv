@@ -144,7 +144,6 @@ const Skills_Interests = (
   <div grid gap-7 h-fit>
     {/*heading */}
     <div font-bold text-2xl vertCentered>
-      {props.icon}
       <Icon
         icon={props.icon.toLowerCase()}
         width="25"
