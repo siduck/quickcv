@@ -145,7 +145,7 @@ const Skills_Interests = (
     {/*heading */}
     <div font-bold text-2xl vertCentered>
       <Icon
-        icon={props.icon}
+        icon={props.icon.toLowerCase()}
         width="25"
         class={`rounded-full dark:bg-black-3 p-[0.3rem] ${props.iconColor}`}
       >
@@ -162,7 +162,7 @@ const Skills_Interests = (
             class="capitalize vertCentered p-1 px-2 rounded-lg"
             bg="slate-1 dark:black-3"
           >
-            <Icon icon={txttoArr[txttoArr.length - 1]}></Icon>
+            <Icon icon={txttoArr[txttoArr.length - 1].toLowerCase()}></Icon>
             {txt}
           </span>
         );
