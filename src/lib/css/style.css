@@ -1,0 +1,70 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --fg: #1d293d;
+  --bg: #ffffff;
+  --primary: #364153;
+  --border: #c4d4e4;
+  --input: #e6edf4;
+  --secondary: #e6edf4;
+  --ring: #a9b0ff;
+  --mutedfg: #557091;
+  --mutedbg: #f5f7fa; /* light desaturated background */
+
+  --success: #22c55e; /* green-500 */
+  --warning: #bb9502; /* yellow-400 */
+  --danger: #ed3535; /* red-500 */
+  --codeblock: #232b3d;
+}
+
+.dark {
+  --fg: #F3F4F6;
+  --bg: #0b1221;
+  --primary: #9baaf2;
+  --secondary: #151e31;
+  --border: #1f2739;
+  --input: #151e31;
+  --ring: #BAE6FD;
+  --mutedfg: #9CA3AF;
+  --mutedbg: #171e2d;
+  --success: #B5E8B0;
+  --warning: #E8D4B0;
+  --danger: #FCA5A5;
+  --codeblock: #121a2a;
+}
+
+
+body {
+  @apply bg-bg text-fg;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  @apply text-2xl lg:text-3xl font-bold tracking-tight;
+}
+
+h2 {
+  @apply text-xl lg:text-2xl font-semibold tracking-tight;
+}
+
+h3 {
+  @apply text-lg lg:text-xl font-medium tracking-tight;
+}
+
+h4 {
+  @apply text-base  lg:text-lg font-medium tracking-tight;
+}
+
+.link {
+  @apply text-primary underline;
+}
+
+/* :focus { */
+/*   outline: 0; */
+/* } */
+
+/* :focus-visible { */
+/*   @apply ring-(3 border) ; */
+/* } */
