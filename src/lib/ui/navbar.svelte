@@ -1,0 +1,30 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+
+  let theme = $state();
+
+  onMount(() => theme = localStorage.theme);
+
+  const toggleTheme = () => {
+    theme = theme == "dark" ? "light" : "dark";
+    localStorage.theme = theme;
+    document.querySelector("html").className = theme;
+  };
+</script>
+
+<nav class="p3 brd frow">
+  <strong class="mr-auto">Quick CV</strong>
+
+  <button
+    class="btn-soft-eqlg rounded-full"
+    aria-label="toggle dark mode"
+    onclick={toggleTheme}
+  >
+    <div
+      class={theme == "dark"
+      ? "i-line-md:sun-rising-twotone-loop"
+      : "i-line-md:moon-twotone-loop"}
+    >
+    </div>
+  </button>
+</nav>
