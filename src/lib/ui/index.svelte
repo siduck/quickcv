@@ -3,7 +3,7 @@
   import Viewer from "../viewer/index.svelte";
 </script>
 
-<div class="grid-(~ cols-2) p-4">
+<div class="grid-(~ cols-2) bg-secondary">
   <Editor />
   <Viewer />
 </div>

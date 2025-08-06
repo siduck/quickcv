@@ -9,11 +9,11 @@ html {
   --primary: #364153;
   --primary-fg: #ffffff;
 
-  --secondary: #d0ddea;
+  --secondary: #eef2f6;
   --secondary-fg: #1d293d;
 
-  --border: #c4d4e4;
-  --input: #e6edf4;
+  --border: #d8e2ec;
+  --input: #f0f4f8;
   --ring: #a9b0ff;
 
   --muted: #f5f7fa; /* light desaturated background */
@@ -88,9 +88,14 @@ h4 {
 }
 
 .doc {
-  width: 210mm;
+  min-width: 210mm;
   height: 297mm;
   transform-origin: top center;
+}
+
+html,
+body {
+  overflow: hidden;
 }
 
 /* :focus { */

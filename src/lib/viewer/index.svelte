@@ -13,8 +13,8 @@
   </span>
 {/snippet}
 
-<div class="brd m5 py10 flex bg-secondary">
-  <div class="flex flex-col gap5 rounded bg-bg doc scale-80 p10">
+<div class="h-screen overflow-auto p5 bg-muted flex justify-center items-start">
+  <div class="flex flex-col gap5 rounded bg-bg doc scale-60 p10">
     <!---------------------- name -------------------------------- -->
     <hr class="w-full brd" />
     <div class="frow mx-auto mt3">

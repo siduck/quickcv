@@ -12,7 +12,7 @@
   };
 </script>
 
-<nav class="p3 brd frow">
+<nav class="p3 brd frow items-center sticky top-0 z-10 bg-bg">
   <strong class="mr-auto">Quick CV</strong>
 
   <button

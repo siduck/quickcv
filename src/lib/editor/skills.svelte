@@ -41,5 +41,5 @@
     {@render projectCard(index)}
   {/each}
 
-  <button class="btn ml-auto" onclick={add}>Add Skill</button>
+  <button class="btn-primary ml-auto" onclick={add}>Add Skill</button>
 </div>
