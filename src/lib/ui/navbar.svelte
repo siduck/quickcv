@@ -1,5 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { Btn } from "@haze-ui/svelte";
+  import { generatePDF } from "$lib/utils";
 
   let theme = $state();
 
@@ -14,6 +16,13 @@
 
 <nav class="p3 brd frow items-center sticky top-0 z-10 bg-bg">
   <strong class="mr-auto">Quick CV</strong>
+
+  <Btn
+    iconL="i-tabler:download"
+    txt="Download"
+    class="btn-primary"
+    onclick={generatePDF}
+  />
 
   <button
     class="btn-soft-eqlg rounded-full"

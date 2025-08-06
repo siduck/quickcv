@@ -98,10 +98,32 @@ body {
   overflow: hidden;
 }
 
-/* :focus { */
-/*   outline: 0; */
-/* } */
+@media print {
+  @page {
+    margin: 0;
+  }
 
-/* :focus-visible { */
-/*   @apply ring-(3 border) ; */
-/* } */
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    height: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #resume,
+  #resume * {
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  #resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}

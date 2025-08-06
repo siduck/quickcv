@@ -2,19 +2,33 @@
   import { assignDummyState, data } from "$lib/state/index.svelte";
   import { textAreaFormat } from "$lib/utils.ts";
 
+  import {
+    brain,
+    briefcase,
+    bullseye,
+    edu,
+    github,
+    link,
+    location,
+    mail,
+    phone,
+  } from "$lib/icons.svelte";
+
+  import type { Snippet } from "svelte";
+
   assignDummyState();
 
-  let name = data.details?.name?.split(" ");
+  let name = $derived(data.details?.name?.split(" "));
 </script>
 
-{#snippet hicon(css: string)}
-  <span class="flex p2 bg-input rounded-full">
-    <i class={css}></i>
+{#snippet hicon(icon: Snippet, css: string = "")}
+  <span class={`flex p2 bg-input rounded-full ${css}`}>
+    {@render icon()}
   </span>
 {/snippet}
 
 <div class="h-screen overflow-auto p5 bg-muted flex justify-center items-start">
-  <div class="flex flex-col gap5 rounded bg-bg doc scale-60 p10">
+  <div class="flex flex-col gap5 rounded bg-bg doc scale-60 p10" id="resume">
     <!---------------------- name -------------------------------- -->
     <hr class="w-full brd" />
     <div class="frow mx-auto mt3">
@@ -29,7 +43,7 @@
     <!---------------------- About -------------------------------- -->
     <div>
       <h2 class="text-2xl font-bold frow">
-        {@render hicon("i-cuida:bullseye-outline bg-danger")}
+        {@render hicon(bullseye, "text-danger")}
         About :
       </h2>
       <br />
@@ -37,12 +51,18 @@
       <p class="text-lg">
         {data.details.about}
       </p>
+
+      <div class="frow mx-auto my5">
+        <span class="frow">{@render phone()} {data.details.phone} </span>
+        <span class="frow">{@render mail()} {data.details.email} </span>
+        <span class="frow">{@render link()} {data.details.website} </span>
+      </div>
     </div>
 
     <!---------------------- Education -------------------------------- -->
     <div>
       <h2 class="text-2xl font-bold frow">
-        {@render hicon("i-mdi:education-outline bg-success")}
+        {@render hicon(edu, "text-success")}
         Education :
       </h2>
       <br />
@@ -67,7 +87,7 @@
 
     <div>
       <h2 class="text-2xl font-bold frow">
-        {@render hicon("i-tabler:briefcase bg-info")}
+        {@render hicon(briefcase, "text-info")}
         Experience :
       </h2>
       <br />
@@ -95,7 +115,7 @@
 
     <div>
       <h2 class="text-2xl font-bold frow">
-        {@render hicon("i-streamline:brain-cognitive bg-warning")}
+        {@render hicon(brain, "text-warning")}
         Skills :
       </h2>
       <br />

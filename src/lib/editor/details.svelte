@@ -45,6 +45,7 @@
     type="text"
     placeholder="Enter phone number"
     iconL="i-line-md:phone"
+    bind:value={data.details.phone}
   />
 
   <label for="location" class="col-span-2">Location</label>
