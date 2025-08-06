@@ -2,7 +2,7 @@ export interface WorkExp {
   company: string | null;
   title: string | null;
   date: string | null;
-  description: string | null;
+  desc: string | null;
 }
 
 export interface Details {
@@ -23,7 +23,7 @@ export interface Education {
 export interface Project {
   name: string | null;
   date: string | null;
-  description: string | null;
+  desc: string | null;
 }
 
 export interface State {

@@ -4,8 +4,8 @@
     "": {
       "name": "my-app",
       "devDependencies": {
-        "@haze-ui/preset": "^0.0.1",
-        "@haze-ui/svelte": "^0.0.1",
+        "@haze-ui/preset": "^0.0.3",
+        "@haze-ui/svelte": "^0.0.7",
         "@iconify/json": "^2.2.366",
         "@sveltejs/adapter-auto": "^6.0.1",
         "@sveltejs/kit": "^2.27.1",
@@ -95,9 +95,9 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.25.8", "", { "os": "win32", "cpu": "x64" }, "sha512-cn3Yr7+OaaZq1c+2pe+8yxC8E144SReCQjN6/2ynubzYjvyqZjTXfQJpAcQpsdJq3My7XADANiYGHoFC69pLQw=="],
 
-    "@haze-ui/preset": ["@haze-ui/preset@0.0.1", "", {}, "sha512-aNxJZ8DVRK4PZyvf+T9IXiMTFXQFGfQG+fSc5glUzoR4a7pVYwhQD85yItZ3RFWzSYL4yPmyYpzPqdaHZBLAhg=="],
+    "@haze-ui/preset": ["@haze-ui/preset@0.0.3", "", {}, "sha512-zbADL64yvU3UlOSoMxnVy2iaSB1V5EW6/Jolvw6F1gBQQSz4yjsdnWU1IEtlSRifPuGC6nu/mNYFbs7lDW3McQ=="],
 
-    "@haze-ui/svelte": ["@haze-ui/svelte@0.0.1", "", { "peerDependencies": { "svelte": "^5.0.0" } }, "sha512-dLga90CxDIo0oPd2Ni/mjQYleRj6TPS5CX7iSSv4lNnsw0Kjo/HmhAAJd/uBUrykHURTnUJHfEOoawZP586EKw=="],
+    "@haze-ui/svelte": ["@haze-ui/svelte@0.0.7", "", { "peerDependencies": { "svelte": "^5.0.0" } }, "sha512-rVdzL+sVAk90RSnHsC3LNIp5F79G4AuRuWSvMOLhTtutjTiX2nx0LzGh5JTOQ8r2nowl8v2lzX+cjIdqRev19w=="],
 
     "@iconify/json": ["@iconify/json@2.2.366", "", { "dependencies": { "@iconify/types": "*", "pathe": "^1.1.2" } }, "sha512-qTSvcqPRlFN1v3MqJs8EH6o0JxtuvrRngGFdqLaa/T/VdtovTcCf4I+bi+/aYnhpan425iIKE9JFQ32Rbm6Ydg=="],
 

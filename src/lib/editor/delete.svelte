@@ -11,7 +11,7 @@
 </script>
 
 <button
-  class="absolute right-0 btn-soft-eqmd text-red rounded-full"
+  class="absolute right-0 btn-soft-eqmd text-danger rounded-full"
   aria-label="delete"
   onclick={() => deleteCard(type, index)}
 >

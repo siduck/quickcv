@@ -22,21 +22,40 @@ export default defineConfig({
     colors: {
       fg: "var(--fg)",
       bg: "var(--bg)",
-      primary: "var(--primary)",
-      secondary: "var(--secondary)",
+      primary: { DEFAULT: "var(--primary)", fg: "var(--primary-fg)" },
+      secondary: { DEFAULT: "var(--secondary)", fg: "var(--secondary-fg)" },
       border: "var(--border)",
       input: "var(--input)",
       ring: "var(--ring)",
-      mutedfg: "var(--mutedfg)",
-      mutedbg: "var(--mutedbg)",
-      success: "var(--success)",
-      warning: "var(--warning)",
-      danger: "var(--danger)",
+
+      muted: {
+        DEFAULT: "var(--muted)",
+        fg: "var(--muted-fg)",
+      },
+
+      success: {
+        DEFAULT: "var(--success)",
+        subtle: "var(--success-subtle)",
+      },
+
+      warning: {
+        DEFAULT: "var(--warning)",
+        subtle: "var(--warning-subtle)",
+      },
+
+      danger: {
+        DEFAULT: "var(--danger)",
+        subtle: "var(--danger-subtle)",
+      },
+
+      info: {
+        DEFAULT: "var(--info)",
+        subtle: "var(--info-subtle)",
+      },
     },
   },
 
-  shortcuts: { 
-    frow : 'flex items-center gap3'
-
-  }
+  shortcuts: {
+    frow: "flex items-center gap3",
+  },
 });

@@ -42,14 +42,14 @@
       id="description"
       placeholder="Enter description of your job"
       class="input col-span-2 min-h-[6rem]"
-      bind:value={data.workExp[index].description}
+      bind:value={data.workExp[index].desc}
     ></textarea>
   </div>
 {/snippet}
 
 <div class="grid gap5">
   <strong class="frow">
-    <i class="i-lucide:briefcase-business"></i> Work Experience
+    <i class="i-tabler:briefcase"></i> Work Experience
   </strong>
 
   {#each data.workExp as work, index}

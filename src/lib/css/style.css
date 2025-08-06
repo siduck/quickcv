@@ -5,36 +5,62 @@ html {
 :root {
   --fg: #1d293d;
   --bg: #ffffff;
+
   --primary: #364153;
+  --primary-fg: #ffffff;
+
+  --secondary: #d0ddea;
+  --secondary-fg: #1d293d;
+
   --border: #c4d4e4;
   --input: #e6edf4;
-  --secondary: #e6edf4;
   --ring: #a9b0ff;
-  --mutedfg: #557091;
-  --mutedbg: #f5f7fa; /* light desaturated background */
+
+  --muted: #f5f7fa; /* light desaturated background */
+  --muted-fg: #557091;
 
   --success: #22c55e; /* green-500 */
+  --success-subtle: #dcfce7;
   --warning: #bb9502; /* yellow-400 */
+  --warning-subtle: #fef9c3;
   --danger: #ed3535; /* red-500 */
+  --danger-subtle: #fee2e2;
+
+  --info: #60a5fa;
+  --info-subtle: #dbeafe;
+
   --codeblock: #232b3d;
 }
 
 .dark {
-  --fg: #F3F4F6;
+  --fg: #f3f4f6;
   --bg: #0b1221;
+
   --primary: #9baaf2;
+  --primary-fg: #0b1221;
+
   --secondary: #151e31;
+  --secondary-fg: #cfd0da;
+
   --border: #1f2739;
   --input: #151e31;
-  --ring: #BAE6FD;
-  --mutedfg: #6b7485;
-  --mutedbg: #171e2d;
-  --success: #B5E8B0;
-  --warning: #E8D4B0;
-  --danger: #FCA5A5;
+  --ring: #bae6fd;
+
+  --muted: #171e2d;
+  --muted-fg: #788393;
+
+  --success: #b5e8b0;
+  --success-subtle: #1d3d23;
+
+  --warning: #e8d4b0;
+  --warning-subtle: #3d3721;
+  --danger: #fca5a5;
+  --danger-subtle: #3f1d1d;
+  --info: #93c5fd;
+  --info-subtle: #1e293b;
+
   --codeblock: #121a2a;
 }
-
 
 body {
   @apply bg-bg text-fg;
@@ -59,6 +85,12 @@ h4 {
 
 .link {
   @apply text-primary underline;
+}
+
+.doc {
+  width: 210mm;
+  height: 297mm;
+  transform-origin: top center;
 }
 
 /* :focus { */

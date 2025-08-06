@@ -5,7 +5,7 @@
   import Education from "./edu.svelte";
 </script>
 
-<div class='grid gap5 p10 children:(p6 brd rounded)'>
+<div class='grid gap5 p5 children:(p6 brd rounded)'>
   <Details />
   <WorkExp />
   <Project />
