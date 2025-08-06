@@ -34,4 +34,9 @@ export default defineConfig({
       danger: "var(--danger)",
     },
   },
+
+  shortcuts: { 
+    frow : 'flex items-center gap3'
+
+  }
 });

@@ -13,10 +13,10 @@
 	},
 	"devDependencies": {
 		"@haze-ui/preset": "^0.0.1",
-		"@haze-ui/svelte": "^0.0.0",
+		"@haze-ui/svelte": "^0.0.1",
 		"@iconify/json": "^2.2.366",
 		"@sveltejs/adapter-auto": "^6.0.1",
-		"@sveltejs/kit": "^2.27.0",
+		"@sveltejs/kit": "^2.27.1",
 		"@sveltejs/vite-plugin-svelte": "^6.1.0",
 		"svelte": "^5.37.3",
 		"svelte-check": "^4.3.1",

@@ -3,6 +3,7 @@
   import "virtual:uno.css"
   import "@unocss/reset/tailwind.css";
   import "$lib/css/style.css"
+  import Ui from "$lib/ui/index.svelte";
 
 	let { children } = $props();
 </script>
@@ -12,3 +13,4 @@
 </svelte:head>
 
 {@render children?.()}
+<Ui />
