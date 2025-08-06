@@ -26,11 +26,17 @@ export interface Project {
   desc: string | null;
 }
 
+export interface Skill {
+  name: string | null;
+  icon: string | null;
+}
+
 export interface State {
   details: Details;
   workExp: WorkExp[];
   education: Education[];
   projects: Project[];
+  skills: Skill[];
 }
 
-export type ListsData = "workExp" | "education" | "projects";
+export type ListsData = "workExp" | "education" | "projects" | "skills";

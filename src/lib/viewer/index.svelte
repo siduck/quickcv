@@ -47,7 +47,7 @@
       </h2>
       <br />
 
-      <div class='grid grid-cols-2 gap3'>
+      <div class="grid grid-cols-2 gap3">
         {#each data.education as edu}
           <div class="frow flex-wrap gap-y-1 mb4">
             <span>
@@ -67,7 +67,7 @@
 
     <div>
       <h2 class="text-2xl font-bold frow">
-        {@render hicon("i-tabler:briefcase bg-warning")}
+        {@render hicon("i-tabler:briefcase bg-info")}
         Experience :
       </h2>
       <br />
@@ -84,13 +84,32 @@
             {work.title}
           </span>
 
-          <ul class="list-disc  space-y-2 w-full text-secondary-fg ml-2" >
+          <ul class="list-disc space-y-2 w-full text-secondary-fg ml-2">
             {#each textAreaFormat(work.desc) as x}
-              <li class='ml-2'>{x}</li>
+              <li class="ml-2">{x}</li>
             {/each}
           </ul>
         </div>
       {/each}
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-bold frow">
+        {@render hicon("i-streamline:brain-cognitive bg-warning")}
+        Skills :
+      </h2>
+      <br />
+
+      <div class="frow flex-wrap mb4">
+        {#each data.skills as x}
+          <span class="badge-secondary-lg">
+            {#if x.icon}
+              {@html x.icon}
+            {/if}
+            {x.name}
+          </span>
+        {/each}
+      </div>
     </div>
   </div>
 </div>
