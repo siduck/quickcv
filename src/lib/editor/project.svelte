@@ -5,7 +5,7 @@
 </script>
 
 {#snippet projectCard(index: number)}
-  <div class="relative grid-(~ cols-[1fr_auto] gap5)">
+  <div class="relative grid-(~ cols-2 gap5)">
     <Delete {index} type="projects" />
 
     <label for="project">Project Name</label>

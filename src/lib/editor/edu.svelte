@@ -5,7 +5,7 @@
 </script>
 
 {#snippet educationCard(index: number)}
-  <div class="grid-(~ cols-[1fr_auto] gap5) relative">
+  <div class="grid-(~ cols-2 gap5) relative">
     <Delete {index} type="education" />
 
     <label for="institution">Institution</label>

@@ -4,6 +4,13 @@
 </script>
 
 <div class="grid-(~ cols-2) bg-secondary">
-  <Editor />
-  <Viewer />
+  <div class="sticky top-0 overflow-y-auto h-screen p5">
+    <Editor />
+  </div>
+
+  <div
+    class="h-screen overflow-auto p5 bg-muted flex justify-center items-start"
+  >
+    <Viewer />
+  </div>
 </div>

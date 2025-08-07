@@ -6,12 +6,10 @@
   import Skills from "./skills.svelte";
 </script>
 
-<div class="sticky top-0 overflow-y-auto h-screen p5">
-  <div class="grid gap5 children:(p5 brd rounded bg-bg)">
-    <Details />
-    <Skills />
-    <WorkExp />
-    <Project />
-    <Education />
-  </div>
+<div class="grid gap5 children:(p5 brd rounded bg-bg)">
+  <Details />
+  <Skills />
+  <WorkExp />
+  <Project />
+  <Education />
 </div>

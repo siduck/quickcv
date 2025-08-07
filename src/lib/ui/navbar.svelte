@@ -15,7 +15,10 @@
 </script>
 
 <nav class="p3 brd frow items-center sticky top-0 z-10 bg-bg">
-  <strong class="mr-auto">Quick CV</strong>
+  <i class='i-icon-park-solid:flashlamp bg-info text-xl'/>
+  <strong >Quick CV</strong>
+
+  <a href='/' class="mr-auto">Templates</a>
 
   <Btn
     iconL="i-tabler:download"
@@ -25,7 +28,7 @@
   />
 
   <button
-    class="btn-soft-eqlg rounded-full"
+    class="btn-soft-eqmd rounded-full"
     aria-label="toggle dark mode"
     onclick={toggleTheme}
   >

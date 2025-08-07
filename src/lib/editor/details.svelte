@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="grid-(~ cols-[1fr_auto] gap5)"
+  class="grid-(~ cols-2 gap5)"
 >
   <strong class="frow">
     <i class="i-majesticons:user-line"></i> Personal Details

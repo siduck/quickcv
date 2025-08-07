@@ -6,7 +6,7 @@
 </script>
 
 {#snippet card(index: number)}
-  <div class="grid-(~ cols-[1fr_auto] gap5) relative">
+  <div class="grid-(~ cols-2 gap5) relative">
     <Delete {index} type="workExp" />
 
     <label for="company" class="col-span-2">Company</label>
