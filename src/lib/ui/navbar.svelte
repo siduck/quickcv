@@ -16,16 +16,18 @@
 
   const setActive = (x: string) => ui.mode = x;
 
-  const handleDemo = (x:any) => {
+  const handleDemo = (x: any) => {
     demoState[x.target.checked ? "fill" : "empty"]();
   };
 </script>
 
 <nav class="p3 brd frow items-center sticky top-0 z-10 bg-bg">
-  <i class="i-icon-park-solid:flashlamp bg-info text-xl"></i>
-  <strong>Quick CV</strong>
+  <a class="frow" href="/">
+    <i class="i-icon-park-solid:flashlamp bg-info text-xl"></i>
+    <strong>Quick CV</strong>
+  </a>
 
-  <a href="/" class="mr-auto">Templates</a>
+  <a href="/templates/minimal" class="mr-auto">Templates</a>
 
   <label for="demoswitch" class="brd frow p2 px3 rounded">
     <input
