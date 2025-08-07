@@ -1,8 +1,9 @@
 <script lang="ts">
   import Editor from "../editor/index.svelte";
-  import Viewer from "../viewer/index.svelte";
   import { ui } from "$lib/state/index.svelte";
   import { Tab, Tabs, TabsContent, TabsList } from "@haze-ui/svelte";
+
+  let { children } = $props();
 </script>
 
 {#if ui.mode == "split"}
@@ -14,7 +15,7 @@
     <div
       class="h-screen overflow-auto p5 flex justify-center items-start scrollbar"
     >
-      <Viewer />
+      {@render children?.()}
     </div>
   </div>
 {:else}
@@ -32,7 +33,7 @@
       </TabsContent>
 
       <TabsContent value="viewer">
-        <Viewer />
+        {@render children?.()}
       </TabsContent>
     </Tabs>
   </div>
