@@ -6,7 +6,7 @@
   import Skills from "./skills.svelte";
 </script>
 
-<div class="grid gap5 children:(p5 brd rounded bg-bg)">
+<div class="grid gap5 children:(p7 rounded bg-bg)">
   <Details />
   <Skills />
   <WorkExp />

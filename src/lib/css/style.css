@@ -9,7 +9,7 @@ html {
   --primary: #364153;
   --primary-fg: #ffffff;
 
-  --secondary: #e3eaf0;
+  --secondary: #eaeef4;
   --secondary-fg: #1d293d;
 
   --border: #d8e2ec;
@@ -126,4 +126,9 @@ body {
     box-shadow: none;
     border-radius: 0;
   }
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color:  color-mix(in srgb, var(--border),black 20%)  var(--border);
 }
