@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { Btn } from "@haze-ui/svelte";
+  import { Btn, Tab, Tabs, TabsList } from "@haze-ui/svelte";
   import { generatePDF } from "$lib/utils";
+  import { ui } from "$lib/state/index.svelte";
 
   let theme = $state();
 
@@ -12,13 +13,23 @@
     localStorage.theme = theme;
     document.querySelector("html").className = theme;
   };
+
+  const setActive = (x: string) => ui.mode = x;
 </script>
 
 <nav class="p3 brd frow items-center sticky top-0 z-10 bg-bg">
-  <i class='i-icon-park-solid:flashlamp bg-info text-xl'/>
-  <strong >Quick CV</strong>
+  <i class="i-icon-park-solid:flashlamp bg-info text-xl"></i>
+  <strong>Quick CV</strong>
 
-  <a href='/' class="mr-auto">Templates</a>
+  <a href="/" class="mr-auto">Templates</a>
+
+  <Tabs value={ui.mode} setValue={setActive}>
+    <TabsList class="p1 tab-(p2 px2 text-sm) tabon-(brd)">
+      <Tab value="split"><i class="i-material-symbols:splitscreen-left"></i>
+        Split</Tab>
+      <Tab value="tab"> <i class="i-gravity-ui:layout-tabs"></i> Tabbed</Tab>
+    </TabsList>
+  </Tabs>
 
   <Btn
     iconL="i-tabler:download"

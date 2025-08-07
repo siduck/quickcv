@@ -24,6 +24,10 @@ export let data: State = $state({
   skills: [defaultObjects.skills],
 });
 
+export let ui = $state({
+  mode: "split",
+});
+
 export const addCard = (type: ListsData) => {
   data[type].push(defaultObjects[type]);
 };

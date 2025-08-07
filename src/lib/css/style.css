@@ -130,5 +130,10 @@ body {
 
 .scrollbar {
   scrollbar-width: thin;
-  scrollbar-color:  color-mix(in srgb, var(--border),black 20%)  var(--border);
+  scrollbar-color: color-mix(in srgb, var(--border), black 20%) var(--border);
+}
+
+.dark .scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--border), white 10%) var(--border);
 }

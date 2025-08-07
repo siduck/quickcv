@@ -27,7 +27,7 @@
   </span>
 {/snippet}
 
-<div class="flex flex-col gap5 rounded bg-bg doc scale-60 p10" id="resume">
+<div class="flex flex-col gap5 rounded bg-bg doc scale-70 p10" id="resume">
   <!---------------------- name -------------------------------- -->
   <hr class="w-full brd" />
   <div class="frow mx-auto mt3">
