@@ -1,0 +1,139 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --fg: #1d293d;
+  --bg: #ffffff;
+
+  --primary: #364153;
+  --primary-fg: #ffffff;
+
+  --secondary: #eaeef4;
+  --secondary-fg: #1d293d;
+
+  --border: #d8e2ec;
+  --input: #f0f4f8;
+  --ring: #a9b0ff;
+
+  --muted: #f5f7fa; /* light desaturated background */
+  --muted-fg: #557091;
+
+  --success: #22c55e; /* green-500 */
+  --success-subtle: #dcfce7;
+  --warning: #bb9502; /* yellow-400 */
+  --warning-subtle: #fef9c3;
+  --danger: #ed3535; /* red-500 */
+  --danger-subtle: #fee2e2;
+
+  --info: #60a5fa;
+  --info-subtle: #dbeafe;
+
+  --codeblock: #232b3d;
+}
+
+.dark {
+  --fg: #f3f4f6;
+  --bg: #0b1221;
+
+  --primary: #9baaf2;
+  --primary-fg: #0b1221;
+
+  --secondary: #151e31;
+  --secondary-fg: #cfd0da;
+
+  --border: #1f2739;
+  --input: #151e31;
+  --ring: #bae6fd;
+
+  --muted: #171e2d;
+  --muted-fg: #788393;
+
+  --success: #b5e8b0;
+  --success-subtle: #1d3d23;
+
+  --warning: #e8d4b0;
+  --warning-subtle: #3d3721;
+  --danger: #fca5a5;
+  --danger-subtle: #3f1d1d;
+  --info: #93c5fd;
+  --info-subtle: #1e293b;
+
+  --codeblock: #121a2a;
+}
+
+body {
+  @apply bg-bg text-fg;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  @apply text-2xl lg:text-3xl font-bold tracking-tight;
+}
+
+h2 {
+  @apply text-xl lg:text-2xl font-semibold tracking-tight;
+}
+
+h3 {
+  @apply text-lg lg:text-xl font-medium tracking-tight;
+}
+
+h4 {
+  @apply text-base  lg:text-lg font-medium tracking-tight;
+}
+
+.link {
+  @apply text-primary underline;
+}
+
+.doc {
+  min-width: 210mm;
+  height: 297mm;
+  transform-origin: top center;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    height: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #resume,
+  #resume * {
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  #resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--border), black 20%) var(--border);
+}
+
+.dark .scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--border), white 10%) var(--border);
+}
