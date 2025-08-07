@@ -5,7 +5,7 @@ const defaultObjects = {
   workExp: { company: null, title: null, date: null, description: null },
   education: { institution: null, date: null, qualification: null },
   projects: { name: null, date: null, description: null },
-  skills: { name: null, icon: null}
+  skills: { name: null, icon: null },
 };
 
 export let data: State = $state({
@@ -21,7 +21,7 @@ export let data: State = $state({
   workExp: [defaultObjects.workExp],
   education: [defaultObjects.education],
   projects: [defaultObjects.projects],
-  skills: [defaultObjects.skills]
+  skills: [defaultObjects.skills],
 });
 
 export const addCard = (type: ListsData) => {
@@ -29,9 +29,7 @@ export const addCard = (type: ListsData) => {
 };
 
 export const deleteCard = (type: ListsData, index: number) => {
-  if (data[type].length > 1) {
-    data[type].splice(index, 1);
-  }
+  data[type].splice(index, 1);
 };
 
 export const assignDummyState = () => {

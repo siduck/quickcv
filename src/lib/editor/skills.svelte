@@ -6,7 +6,7 @@
 
 {#snippet projectCard(index: number)}
   <div class="relative grid-(~ cols-2 gap5)">
-    <Delete {index} type="projects" />
+    <Delete {index} type="skills" />
 
     <label for="skill">Skill Name</label>
     <label for="skill-icon">Svg icon url</label>
