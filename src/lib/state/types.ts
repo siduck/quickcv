@@ -6,12 +6,12 @@ export interface WorkExp {
 }
 
 export interface Details {
-  name: string | null;
-  about: string | null;
-  email: string | null;
-  phone: string | null;
-  location: string | null;
-  website: string | null;
+  name?: string | null;
+  about?: string | null;
+  email?: string | null;
+  phone?: string | null;
+  location?: string | null;
+  website?: string | null;
 }
 
 export interface Education {

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { assignDummyState, data } from "$lib/state/index.svelte";
-  import { textAreaFormat } from "$lib/utils.ts";
+  import { data } from "$lib/state/index.svelte";
+  import { textAreaFormat } from "$lib/utils";
 
   import {
     brain,
@@ -15,8 +15,6 @@
   } from "$lib/icons.svelte";
 
   import type { Snippet } from "svelte";
-
-  assignDummyState();
 
   let name = $derived(data.details?.name?.split(" "));
 </script>
@@ -109,7 +107,7 @@
         </span>
 
         <ul class="list-disc space-y-2 w-full text-secondary-fg ml-2">
-          {#each textAreaFormat(work.desc) as x}
+          {#each textAreaFormat(work?.desc) as x}
             <li class="ml-2">{x}</li>
           {/each}
         </ul>

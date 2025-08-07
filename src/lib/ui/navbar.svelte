@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { Btn, Tab, Tabs, TabsList } from "@haze-ui/svelte";
   import { generatePDF } from "$lib/utils";
-  import { ui } from "$lib/state/index.svelte";
+  import { demoState, ui } from "$lib/state/index.svelte";
 
   let theme = $state();
 
@@ -15,6 +15,10 @@
   };
 
   const setActive = (x: string) => ui.mode = x;
+
+  const handleDemo = (x:any) => {
+    demoState[x.target.checked ? "fill" : "empty"]();
+  };
 </script>
 
 <nav class="p3 brd frow items-center sticky top-0 z-10 bg-bg">
@@ -22,6 +26,16 @@
   <strong>Quick CV</strong>
 
   <a href="/" class="mr-auto">Templates</a>
+
+  <label for="demoswitch" class="brd frow p2 px3 rounded">
+    <input
+      type="checkbox"
+      class="checkbox-sm"
+      id="demoswitch"
+      onchange={handleDemo}
+    />
+    Demo
+  </label>
 
   <Tabs value={ui.mode} setValue={setActive}>
     <TabsList class="p1 tab-(p2 px2 text-sm) tabon-(brd)">
