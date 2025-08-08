@@ -46,12 +46,10 @@ export default {
   projects: [
     {
       name: "Resume Builder",
-      date: "2023",
       desc: "A Svelte-based app that helps users build and export professional resumes in real time.",
     },
     {
       name: "Nvim Config",
-      date: "2022",
       desc: "Custom Neovim setup in Lua focused on performance, usability, and minimal distractions.",
     },
   ],

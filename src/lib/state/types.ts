@@ -22,7 +22,6 @@ export interface Education {
 
 export interface Project {
   name: string | null;
-  date: string | null;
   desc: string | null;
 }
 
