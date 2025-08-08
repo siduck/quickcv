@@ -14,7 +14,10 @@
     document.querySelector("html").className = theme;
   };
 
-  const setActive = (x: string) => ui.mode = x;
+  const setActive = (x: string) => {
+    document.body.style.overflow = x == "split" ? "hidden" : "visible";
+    ui.mode = x;
+  };
 
   const handleDemo = (x: any) => {
     demoState[x.target.checked ? "fill" : "empty"]();
