@@ -1,27 +1,14 @@
 <script lang="ts">
-  import { data } from "$lib/state/index.svelte";
+  import icons from "$lib/icons";
   import { textAreaFormat } from "$lib/utils";
-
-  import {
-    brain,
-    briefcase,
-    bullseye,
-    edu,
-    github,
-    link,
-    location,
-    mail,
-    phone,
-  } from "$lib/icons.svelte";
-
-  import type { Snippet } from "svelte";
+  import { data } from "$lib/state/index.svelte";
 
   let name = $derived(data.details?.name?.split(" "));
 </script>
 
-{#snippet hicon(icon: Snippet, css: string = "")}
+{#snippet hicon(icon: string, css: string = "")}
   <span class={`flex p2 bg-input rounded-full ${css}`}>
-    {@render icon()}
+    {@html icons[icon]}
   </span>
 {/snippet}
 
@@ -40,7 +27,7 @@
   <!---------------------- About -------------------------------- -->
   <div>
     <h2 class="text-2xl font-bold frow">
-      {@render hicon(bullseye, "text-danger")}
+      {@render hicon("bullseye", "text-danger")}
       About :
     </h2>
     <br />
@@ -50,13 +37,13 @@
     </p>
 
     <div class="frow mx-auto my5">
-      <span class="frow">{@render phone()} {data.details.phone} </span>
-      <span class="frow">{@render mail()} {data.details.email} </span>
+      <span class="frow">{@html icons.phone} {data.details.phone} </span>
+      <span class="frow">{@html icons.mail} {data.details.email} </span>
       <a
         class="frow"
         href={data.details.website}
         target="_blank"
-      >{@render link()} {data.details.website}
+      >{@html icons.link} {data.details.website}
       </a>
     </div>
   </div>
@@ -64,7 +51,7 @@
   <!---------------------- Education -------------------------------- -->
   <div>
     <h2 class="text-2xl font-bold frow">
-      {@render hicon(edu, "text-success")}
+      {@render hicon("edu", "text-success")}
       Education :
     </h2>
     <br />
@@ -89,7 +76,7 @@
 
   <div>
     <h2 class="text-2xl font-bold frow">
-      {@render hicon(briefcase, "text-info")}
+      {@render hicon("briefcase", "text-info")}
       Experience :
     </h2>
     <br />
@@ -117,7 +104,7 @@
 
   <div>
     <h2 class="text-2xl font-bold frow">
-      {@render hicon(brain, "text-warning")}
+      {@render hicon("brain", "text-warning")}
       Skills :
     </h2>
     <br />
