@@ -19,4 +19,6 @@
 </svelte:head>
 
 <Navbar />
-<Ui {children} />
+<Ui>
+  {@render children()}
+</Ui>

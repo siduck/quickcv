@@ -116,7 +116,7 @@ body {
   #resume,
   #resume * {
     visibility: visible;
-    transform: scale(1);
+    scale: 1 !important;
   }
 
   #resume {

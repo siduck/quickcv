@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { Btn, Tab, Tabs, TabsList } from "@haze-ui/svelte";
   import { generatePDF } from "$lib/utils";
+  import Viewscale from "./viewscale.svelte";
   import { demoState, ui } from "$lib/state/index.svelte";
 
   let theme = $state();
@@ -31,6 +32,8 @@
   </a>
 
   <a href="/templates/minimal" class="mr-auto">Templates</a>
+
+  <Viewscale />
 
   <label for="demoswitch" class="brd frow p2 px3 rounded">
     <input

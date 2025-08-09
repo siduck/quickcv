@@ -26,6 +26,7 @@ export let data: State = $state({
 
 export let ui = $state({
   mode: "split",
+  viewScale: 70,
 });
 
 export const addCard = (type: ListsData) => {
