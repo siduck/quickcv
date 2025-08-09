@@ -91,6 +91,7 @@ h4 {
   min-width: 210mm;
   height: 297mm;
   transform-origin: top center;
+  transition: scale 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 body {
