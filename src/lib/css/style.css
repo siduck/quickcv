@@ -88,8 +88,8 @@ h4 {
 }
 
 .doc {
-  width: 210mm;
-  height: 297mm;
+  min-width: 210mm;
+  min-height: 297mm;
   transform-origin: top center;
   transition: scale 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -104,9 +104,9 @@ body {
   }
 
   body {
+    background: var(--bg);
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
-    height: 0;
   }
 
   body * {
@@ -116,15 +116,17 @@ body {
   #resume,
   #resume * {
     visibility: visible;
-    scale: 1 !important;
   }
 
   #resume {
+    scale: 1 !important;
     position: absolute;
     left: 0;
     top: 0;
     box-shadow: none;
     border-radius: 0;
+    inset:0;
+    height: 100%;
   }
 }
 

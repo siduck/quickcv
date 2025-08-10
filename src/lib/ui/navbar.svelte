@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { page } from "$app/state";
   import { Btn, Tab, Tabs, TabsList } from "@haze-ui/svelte";
   import { generatePDF } from "$lib/utils";
   import Viewscale from "./viewscale.svelte";
@@ -31,37 +32,39 @@
     <strong>Quick CV</strong>
   </a>
 
-  <a href="/templates" class="mr-auto">Templates</a>
+  <a href="/templates" class="mr-auto ml2">Templates</a>
 
-  <Viewscale />
+  {#if page.url.pathname == "/"}
+    <Viewscale />
 
-  <label for="demoswitch" class="brd frow p2 px3 rounded">
-    <input
-      type="checkbox"
-      class="checkbox-sm"
-      id="demoswitch"
-      onchange={handleDemo}
+    <label for="demoswitch" class="brd frow p2 px3 rounded">
+      <input
+        type="checkbox"
+        class="checkbox-sm"
+        id="demoswitch"
+        onchange={handleDemo}
+      />
+      Demo
+    </label>
+
+    <Tabs value={ui.mode} setValue={setActive}>
+      <TabsList class="p1 tab-(p2 px2 text-sm) tabon-(brd)">
+        <Tab value="split"><i class="i-material-symbols:splitscreen-left"></i>
+          Split</Tab>
+        <Tab value="tab"> <i class="i-gravity-ui:layout-tabs"></i> Tabbed</Tab>
+      </TabsList>
+    </Tabs>
+
+    <Btn
+      iconL="i-tabler:download"
+      txt="Download"
+      class="btn-primary"
+      onclick={generatePDF}
     />
-    Demo
-  </label>
-
-  <Tabs value={ui.mode} setValue={setActive}>
-    <TabsList class="p1 tab-(p2 px2 text-sm) tabon-(brd)">
-      <Tab value="split"><i class="i-material-symbols:splitscreen-left"></i>
-        Split</Tab>
-      <Tab value="tab"> <i class="i-gravity-ui:layout-tabs"></i> Tabbed</Tab>
-    </TabsList>
-  </Tabs>
-
-  <Btn
-    iconL="i-tabler:download"
-    txt="Download"
-    class="btn-primary"
-    onclick={generatePDF}
-  />
+  {/if}
 
   <button
-    class="btn-soft-eqmd rounded-full"
+    class="btn-soft-eqlg rounded-full"
     aria-label="toggle dark mode"
     onclick={toggleTheme}
   >
