@@ -9,7 +9,7 @@
 </script>
 
 {#if ui.mode == "split"}
-  <div class={`grid-(~ cols-2) bg-secondary`}>
+  <div class={`grid-(~ cols-2)`}>
     <div class="sticky top-0 overflow-y-auto h-screen p5 scrollbar">
       <Editor />
     </div>
@@ -27,7 +27,7 @@
     </div>
   </div>
 {:else}
-  <div class={`grid gap3 bg-secondary justify-center py10`}>
+  <div class={`grid gap3 justify-center py10`}>
     <Tabs>
       <TabsList class="mx-auto !bg-bg bg-muted tabon-(!bg-secondary)">
         <Tab value="editor"><i class="i-fa-regular:edit"></i>
