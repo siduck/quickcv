@@ -137,3 +137,37 @@ body {
   scrollbar-width: thin;
   scrollbar-color: color-mix(in srgb, var(--border), white 10%) var(--border);
 }
+
+input[type="range"] {
+  @apply appearance-none h-3 outline-none overflow-hidden rounded-sm;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  @apply bg-border h-full;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none h-full w-8px  border-0 outine-0 rounded-0;
+  box-shadow: -20em 0 0 20em var(--primary);
+  background-color: hsl(from var(--primary) h s 60%);
+  @apply transition duration-300;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  box-shadow: -20em 0 0 20em var(--info);
+  background-color: hsl(from var(--info) h s 60%);
+}
+
+input[type="range"]::-moz-range-track {
+  @apply bg-input h-full;
+}
+
+input[type="range"]::-moz-range-thumb {
+  @apply appearance-none h-full w-8px border-0 outine-0 rounded-0;
+  background-color: hsl(from var(--primary) h s 60%);
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  box-shadow: -20em 0 0 20em var(--info);
+  background-color: hsl(from var(--info) h s 60%);
+}
