@@ -31,7 +31,7 @@
     <strong>Quick CV</strong>
   </a>
 
-  <a href="/templates/minimal" class="mr-auto">Templates</a>
+  <a href="/templates" class="mr-auto">Templates</a>
 
   <Viewscale />
 
