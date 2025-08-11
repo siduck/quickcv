@@ -5,7 +5,6 @@
 
   let { children } = $props();
 
-  let resumeCss = "flex flex-col gap3 rounded bg-bg doc p10";
 </script>
 
 {#if ui.mode == "split"}
@@ -18,7 +17,7 @@
       class="h-screen overflow-auto pt5 flex justify-center items-start scrollbar"
     >
       <div
-        class={resumeCss}
+        class='doc'
         id="resume"
         style={`scale: ${ui.viewScale}%`}
       >
@@ -42,7 +41,7 @@
 
       <TabsContent
         value="viewer"
-        class={resumeCss}
+        class='doc'
         style={`scale: ${ui.viewScale}%`}
         id="resume"
       >

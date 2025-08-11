@@ -48,20 +48,36 @@
     bind:value={data.details.phone}
   />
 
-  <label for="location" class="col-span-2">Location</label>
+  <label for="location" >Location</label>
+  <label for="website" >Website</label>
   <Input
     id="location"
     iconL="i-tdesign:location-filled"
     type="text"
     placeholder="Enter location"
-    class="col-span-2"
   />
 
-  <label for="website" class="col-span-2">Website</label>
-  <input
+  <Input
     id="website"
     type="url"
     placeholder="Enter website"
-    class="col-span-2 input"
+    iconL='i-lucide:globe'
+  />
+
+    <label for="email">Email</label>
+  <label for="phone">Phone Number</label>
+
+  <Input
+    id="github"
+    placeholder="Enter github url"
+    iconL="i-mdi:github"
+    bind:value={data.details.github}
+  />
+  <Input
+    id="linkedin"
+    type="text"
+    placeholder="Enter linkedin url"
+    iconL="i-mdi:linkedin"
+    bind:value={data.details.phone}
   />
 </div>

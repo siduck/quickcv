@@ -1,13 +1,6 @@
 import type { State, ListsData } from "./types";
 import dummyState from "./dummydata";
 
-const defaultObjects = {
-  workExp: { company: null, title: null, date: null, description: null },
-  education: { institution: null, date: null, qualification: null },
-  projects: { name: null, date: null, description: null },
-  skills: { name: null, icon: null },
-};
-
 export let data: State = $state({
   details: {
     name: null,
@@ -18,10 +11,10 @@ export let data: State = $state({
     website: null,
   },
 
-  workExp: [defaultObjects.workExp],
-  education: [defaultObjects.education],
-  projects: [defaultObjects.projects],
-  skills: [defaultObjects.skills],
+  workExp: [{}],
+  education: [{}],
+  projects: [{}],
+  skills: [{}],
 });
 
 export let ui = $state({
@@ -30,7 +23,7 @@ export let ui = $state({
 });
 
 export const addCard = (type: ListsData) => {
-  data[type].push(defaultObjects[type]);
+  data[type].push({});
 };
 
 export const deleteCard = (type: ListsData, index: number) => {

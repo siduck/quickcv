@@ -12,6 +12,8 @@ export interface Details {
   phone?: string | null;
   location?: string | null;
   website?: string | null;
+  github?: string | null;
+  linkedin?: string | null;
 }
 
 export interface Education {
@@ -23,6 +25,7 @@ export interface Education {
 export interface Project {
   name: string | null;
   desc: string | null;
+  link: string | null;
 }
 
 export interface Skill {

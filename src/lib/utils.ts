@@ -10,3 +10,10 @@ export const generatePDF = () => {
     window.print();
   }
 };
+
+export const formatUrl = (url: any) => {
+   if(url?.startsWith("https")) {
+    return url?.replace("https://", "");
+  }
+  return url
+}

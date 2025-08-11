@@ -72,7 +72,7 @@ h1 {
 }
 
 h2 {
-  @apply text-xl lg:text-2xl font-semibold tracking-tight;
+  @apply text-xl lg:text-2xl font-bold tracking-tight;
 }
 
 h3 {
@@ -92,6 +92,12 @@ h4 {
   min-height: 297mm;
   transform-origin: top center;
   transition: scale 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  @apply p10 rounded bg-bg flex flex-col gap3 rounded trcking-tight
+}
+
+.doc a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 body {

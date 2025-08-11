@@ -34,10 +34,7 @@
     <i class="i-typcn:code-outline"></i> Skills
   </strong>
 
-  {#each data.skills as skill, index}
-    {#if index > 0}
-      <hr class="w-full brd" />
-    {/if}
+  {#each data.skills as _, index}
     {@render projectCard(index)}
   {/each}
 

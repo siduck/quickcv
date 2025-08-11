@@ -29,7 +29,7 @@ export default {
 
   edu: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9zm6.82 6L12 12.72L5.18 9L12 5.28zM17 16l-5 2.72L7 16v-3.73L12 15l5-2.73z"/></svg>`,
 
-  brain: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><path d="M9.5 13.5V11h2a1 1 0 0 0 1-1V6a5.5 5.5 0 1 0-8 4.9v2.6"/><path d="M5.5 3.312a3.25 3.25 0 0 0-1.436 3.9c.12.335.48.503.824.412c1.737-.46 3.505-1.705 4.58-2.675c.285-.257.343-.687.09-.975A3.25 3.25 0 0 0 5.5 3.312"/></g></svg>`,
+  brain :`<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14"><path fill="currentColor" fill-rule="evenodd" d="M9.942.768a6.02 6.02 0 0 0-6.019 10.425v2.182a.625.625 0 1 0 1.25 0v-2.55a.63.63 0 0 0-.34-.557a4.77 4.77 0 1 1 6.937-4.25v3.924a.356.356 0 0 1-.356.356H9.452a.625.625 0 0 0-.625.625v2.452a.625.625 0 1 0 1.25 0v-1.827h1.337a1.606 1.606 0 0 0 1.606-1.606V6.019A6.02 6.02 0 0 0 9.942.768M5.375 3.095a3.5 3.5 0 0 1 4.37.714c.36.407.26.992-.11 1.325c-1.088.983-2.891 2.257-4.683 2.732c-.456.12-.956-.1-1.123-.57a3.5 3.5 0 0 1 1.546-4.2" clip-rule="evenodd"/></svg>`,
 
   briefcase: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm5-2V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-4 5v.01"/><path d="M3 13a20 20 0 0 0 18 0"/></g></svg>`,
 
@@ -41,5 +41,10 @@ export default {
 
   link: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m0-6h1a6 6 0 0 1 0 12h-1m-6 0H8A6 6 0 0 1 8 6h1"/></svg>`,
 
-  github: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M9 19c-4.3 1.4-4.3-2.5-6 0M18 13c-3.9 1.5-3.9 -4.3-6-6M6 11l3-3l3 3"/><path stroke-dasharray="24" stroke-dashoffset="24" d="M9 19c-4.3 1.4-4.3-2.5-6 0M18 13c-3.9 1.5-3.9 -4.3-6-6M6 11l3-3l3 3"/></g></svg>`,
+  github: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>`,
+
+  globe: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9 9 0 1 0 0-18m0 18a9 9 0 1 1 0-18m0 18c2.761 0 3.941-5.163 3.941-9S14.761 3 12 3m0 18c-2.761 0-3.941-5.163-3.941-9S9.239 3 12 3M3.5 9h17m-17 6h17"/></svg>`,
+
+  opensource: `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1200 1200"><path fill="currentColor" d="M600.073 17.426C268.728 17.426 0 286.008 0 617.353c0 260.49 166.117 482.172 398.146 565.076L546.04 791.313c-74.269-23.013-128.273-92.136-128.273-173.96c0-100.646 81.661-182.307 182.308-182.307s182.16 81.66 182.16 182.307c0 81.888-53.952 151.147-128.273 174.106l147.896 391.115C1033.938 1099.72 1200 877.909 1200 617.353c0-331.345-268.581-599.927-599.927-599.927"/></svg>`
 };
+

@@ -9,7 +9,7 @@
     <Delete {index} type="projects" />
 
     <label for="project">Project Name</label>
-    <label for="project-date">Date</label>
+    <label for="project-link">Link</label>
 
     <input
       id="project"
@@ -21,10 +21,10 @@
 
     <input
       id="project-date"
-      type="text"
-      placeholder="2022"
+      placeholder="Enter link"
       class="input"
-      bind:value={data.projects[index].date}
+      bind:value={data.projects[index].link}
+      type="url"
     />
 
     <label for="project-desc" class="col-span-2">Description</label>
@@ -33,7 +33,7 @@
       type="text"
       placeholder="Enter desc"
       class="col-span-2 input"
-      bind:value={data.projects[index].description}
+      bind:value={data.projects[index].desc}
     />
   </div>
 {/snippet}
