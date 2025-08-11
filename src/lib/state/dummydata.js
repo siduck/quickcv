@@ -5,12 +5,12 @@ export default {
     name: "Sidhanth Rathod",
     about:
       "Self-taught Front-End Web Developer passionate about creating beautiful and performant websites, aiming to create the best user experience possible! Everything I make is beautiful. I use Arch btw.",
-    email: "jane.doe@example.com",
-    phone: "+91 9876543210",
+    email: "siduck@tutanota.com",
+    phone: "+91 9701611257",
     location: "Hyderabad, India",
-    website: "https://github.com/siduck",
+    // website: "https://github.com/siduck",
 
-    github: "janedoe",
+    github: "siduck",
     linkedin: "https://linkedin.com/in/janedoe",
   },
 

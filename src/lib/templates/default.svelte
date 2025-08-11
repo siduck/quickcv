@@ -23,12 +23,15 @@
 <div class="frow border-(t b solid fg) py3 text-sm justify-center [&>*]:gap2">
   <span class="frow">{@html icons.phone} {data.details.phone} </span>
   <span class="frow">{@html icons.mail} {data.details.email} </span>
-  <a
-    class="frow"
-    href={data.details.website}
-    target="_blank"
-  >{@html icons.globe} {formatUrl(data.details.website)}
-  </a>
+
+  {#if data.details.website}
+    <a
+      class="frow"
+      href={data.details.website}
+      target="_blank"
+    >{@html icons.globe} {formatUrl(data.details.website)}
+    </a>
+  {/if}
 
   <a
     class="frow"
@@ -96,12 +99,14 @@
   {/each}
 </div>
 
-<h2 class="frow">{@render hicon("opensource" )}Projects :</h2>
+<h2 class="frow">{@render hicon("opensource")}Projects :</h2>
 
 {#if data.projects.length > 0}
   {#each data.projects as project}
-    <div class='flex flex-wrap'>
-      <span class="badge-lg bg-fg text-primary-fg rounded-b-0">{project.name}</span>
+    <div class="flex flex-wrap">
+      <span class="badge-lg bg-fg text-primary-fg rounded-b-0">{
+        project.name
+      }</span>
       <a href={project.link} target="_blank" class="ml-auto">Link</a>
       <p class="brd-2-fg p3 rounded rounded-tl-0 w-full">{project.desc}</p>
     </div>
