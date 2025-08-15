@@ -92,7 +92,7 @@ h4 {
   min-height: 297mm;
   transform-origin: top center;
   transition: scale 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  @apply p10 rounded bg-bg flex flex-col gap3 rounded trcking-tight
+  @apply p10 rounded bg-bg flex flex-col gap3 rounded trcking-tight;
 }
 
 .doc a {
@@ -110,7 +110,7 @@ body {
   }
 
   html {
-    background: var(--bg)
+    background: var(--bg);
   }
 
   body {
@@ -125,6 +125,7 @@ body {
   #resume,
   #resume * {
     visibility: visible;
+    break-inside: avoid;
   }
 
   #resume {
@@ -134,7 +135,7 @@ body {
     top: 0;
     box-shadow: none;
     border-radius: 0;
-    width:100%;
+    width: 100%;
     height: 100%;
   }
 }
