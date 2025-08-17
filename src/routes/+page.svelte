@@ -6,9 +6,6 @@
   import { onMount } from "svelte";
   import { ui } from "$lib/state/index.svelte";
 
-  let { children } = $props();
-  console.log(children, "bro");
-
   let themes = {
     default: Default,
     minimal: Minimal,

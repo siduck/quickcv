@@ -65,7 +65,7 @@
   />
 
     <label for="email">Email</label>
-  <label for="phone">Phone Number</label>
+  <label for="phone">Linkedin</label>
 
   <Input
     id="github"
@@ -78,6 +78,6 @@
     type="text"
     placeholder="Enter linkedin url"
     iconL="i-mdi:linkedin"
-    bind:value={data.details.phone}
+    bind:value={data.details.linkedin}
   />
 </div>
