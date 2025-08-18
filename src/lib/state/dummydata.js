@@ -8,6 +8,7 @@ export default {
     email: "siduck@tutanota.com",
     phone: "+91 9701611257",
     location: "Hyderabad, India",
+    role:'Frontend Developer',
     // website: "https://github.com/siduck",
 
     github: "siduck",

@@ -2,10 +2,12 @@
   import { onMount } from "svelte";
   import Default from "$lib/templates/default.svelte";
   import Minimal from "$lib/templates/minimal.svelte";
+  import Tile from "$lib/templates/tile.svelte";
 
   let List = [
     { name: "default", component: Default },
     { name: "minimal", component: Minimal },
+    { name: "tile", component: Tile },
   ];
 
   onMount(() => document.body.style.overflow = "visible");

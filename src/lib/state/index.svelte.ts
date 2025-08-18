@@ -9,6 +9,7 @@ export let data: State = $state({
     phone: null,
     location: null,
     website: null,
+    role: null,
   },
 
   workExp: [{}],

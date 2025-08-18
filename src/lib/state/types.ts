@@ -14,6 +14,7 @@ export interface Details {
   website?: string | null;
   github?: string | null;
   linkedin?: string | null;
+  role?: string | null;
 }
 
 export interface Education {

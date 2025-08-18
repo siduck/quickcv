@@ -30,6 +30,17 @@
     class="col-span-2 input"
   />
 
+  
+  <label for="about" class="col-span-2">Role</label>
+
+  <input
+    id="role"
+    type="text"
+    placeholder="about"
+    bind:value={data.details.role}
+    class="col-span-2 input"
+  />
+
   <label for="email">Email</label>
   <label for="phone">Phone Number</label>
 

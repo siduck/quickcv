@@ -6,8 +6,8 @@
 <h1 class="text-4xl">{data.details.name}</h1>
 
 <div class="frow mt--1">
-  {data.details.email} |
-  {data.details.phone} |
+  <span> {data.details.email} </span>|
+  <span> {data.details.phone} </span>|
   <a href={data.details.website} target="_blank">
     {formatUrl(data.details.website)}
   </a>
