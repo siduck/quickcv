@@ -4,6 +4,7 @@
   import { data } from "$lib/state/index.svelte";
 
   let name = $derived(data.details?.name?.split(" "));
+  let name2 = $derived(name?.slice(1))
 </script>
 
 {#snippet hicon(icon: string, css: string = "")}
@@ -15,7 +16,7 @@
 <!---------------------- name -------------------------------- -->
 <div class="frow mx-auto">
   <h1 class="text-4xl">{name?.[0]}</h1>
-  <h1 class="text-primary text-4xl">{name?.[1]}</h1>
+  <h1 class="text-primary text-4xl">{name2?.join(' ')}</h1>
 </div>
 
 <span class="text-(center xl) mb3 font-light">{data.details.role}</span>
