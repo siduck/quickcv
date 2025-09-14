@@ -7,8 +7,8 @@
   let name2 = $derived(name?.slice(1))
 </script>
 
-{#snippet hicon(icon: string, css: string = "")}
-  <span class={`flex p1.5 bg-secondary text-xl rounded-full ${css}`}>
+{#snippet hicon(icon: string)}
+  <span class={`flex p1.5 bg-secondary text-xl rounded-full`}>
     {@html icons[icon]}
   </span>
 {/snippet}
@@ -40,11 +40,11 @@
 </div>
 
 <!---------------------- About -------------------------------- -->
-<h2 class="frow">{@render hicon("bullseye", "text-danger")}About :</h2>
+<h2 class="frow">{@render hicon("bullseye")}About :</h2>
 
 <p>{data.details.about}</p>
 
-<h2 class="frow">{@render hicon("briefcase", "text-success")}Experience :</h2>
+<h2 class="frow">{@render hicon("briefcase")}Experience :</h2>
 
 {#each data.workExp as work}
   <div class="frow flex-wrap gap-y-1 mb4">
@@ -65,7 +65,7 @@
 {/each}
 
 <!---------------------- Education -------------------------------- -->
-<h2 class="frow">{@render hicon("edu", "text-info")}Education :</h2>
+<h2 class="frow">{@render hicon("edu")}Education :</h2>
 
 <div class="grid grid-cols-2 gap3">
   {#each data.education as edu}
@@ -84,7 +84,7 @@
   {/each}
 </div>
 
-<h2 class="frow">{@render hicon("brain", "text-warning")}Skills :</h2>
+<h2 class="frow">{@render hicon("brain")}Skills :</h2>
 
 <div class="frow flex-wrap mb4 mt2">
   {#each data.skills as x}

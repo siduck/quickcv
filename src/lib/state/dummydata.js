@@ -33,7 +33,7 @@ export default {
         "- Responsible for creating and maintaining company's website",
         "- Converted UI figma designs into real responsive React + Unocss components",
         "- Used Git for version control system for managing various branches for deployment & integrated with vercel deployments",
-        "- Used React and Nextjs to build a fully functional H.R platform, integrated API into the frontend to show user data and maintained four various deployments.",
+        "- Used React and Nextjs to build a fully functional H.R platform, integrated API into the frontend to show user data and maintained four various deployments",
       ].join("\n"),
     },
   ],
