@@ -75,7 +75,7 @@
     iconL='i-lucide:globe'
   />
 
-    <label for="email">Email</label>
+  <label for="github">GitHub</label>
   <label for="phone">Linkedin</label>
 
   <Input
